@@ -22,6 +22,12 @@
 > [!NOTE]
 > O medidor precisa do [Npcap](https://npcap.com) e o Aion 2 deve estar em **modo janela** ou **janela sem bordas**. Detalhes em [Como instalar](#como-instalar).
 
+## Veja em ação
+
+Com som e controles (50 s, dados simulados):
+
+https://github.com/user-attachments/assets/f17309fa-6686-4871-b4fb-590bde3b01d0
+
 ## O que é
 
 - **AionCore Meter**: medidor de dano e cura em tempo real, com tempo para derrotar o chefe, mortes, histórico de lutas e comparação entre lutas.
