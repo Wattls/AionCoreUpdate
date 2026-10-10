@@ -35,23 +35,18 @@ https://github.com/user-attachments/assets/f17309fa-6686-4871-b4fb-590bde3b01d0
 - **Guia**: tradução completa para PT-BR do guia de Kanon, com busca, abas por capítulo e vídeos do YouTube dentro da janela.
 - **Início e atalhos globais**: um painel sobre o jogo com Guia, YouTube e DPS Meter; os atalhos funcionam por cima do jogo e dá para trocar em Início › Atalhos.
 
-<details open>
-<summary><b>Medidor no visual Faixas</b>, com aviso de mecânica de chefe</summary>
-
-<img alt="Medidor de DPS no visual Faixas, com aviso de mecânica de chefe (dados simulados)" src="media/shot-medidor.jpg" width="900">
-</details>
-
-<details>
-<summary><b>Avisos fora do jogo</b>: convites e chamados com classe, nível, GS e PC</summary>
-
-<img alt="Avisos sociais empilhados com classe, nível, GS e PC (dados simulados)" src="media/shot-avisos.jpg" width="900">
-</details>
-
-<details>
-<summary><b>Painel da sala</b>, com o botão Ir para o jogo</summary>
-
-<img alt="Painel da sala com o botão Ir para o jogo (dados simulados)" src="media/shot-sala.jpg" width="900">
-</details>
+<table>
+  <tr>
+    <td width="33%"><img alt="Medidor de DPS no visual Faixas, com aviso de mecânica de chefe (dados simulados)" src="media/shot-medidor.jpg"></td>
+    <td width="33%"><img alt="Avisos sociais empilhados com classe, nível, GS e PC (dados simulados)" src="media/shot-avisos.jpg"></td>
+    <td width="33%"><img alt="Painel da sala com o botão Ir para o jogo (dados simulados)" src="media/shot-sala.jpg"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Medidor · visual Faixas</sub></td>
+    <td align="center"><sub>Avisos fora do jogo</sub></td>
+    <td align="center"><sub>Painel da sala</sub></td>
+  </tr>
+</table>
 
 ## Como instalar
 
