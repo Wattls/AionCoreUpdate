@@ -4,7 +4,7 @@
 
 **HUD, guia em português e medidor de DPS para o Aion 2.**
 
-[**⬇ Baixar a última versão**](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [Todas as versões](https://github.com/filvoch/AionCoreUpdate/releases) · [Site](https://aioncore.pages.dev)
+[**⬇ Baixar a última versão**](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) · [Todas as versões](https://github.com/filvoch/AionCoreUpdate/releases) · [Site](https://aioncore.pages.dev)
 
 [![Apresentação do AionCore (clique para assistir)](media/poster.jpg)](media/AionCore-apresentacao.mp4)
 
@@ -21,7 +21,7 @@
 
 ## Como instalar
 
-1. Baixe o `AionCore-Setup-x.y.z.exe` na [versão mais recente](https://github.com/filvoch/AionCoreUpdate/releases/latest) (aba **Assets**) e execute.
+1. [Baixe o instalador](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) (sempre a versão mais recente; notas em [Releases](https://github.com/filvoch/AionCoreUpdate/releases/latest)) e execute.
 2. Instale o [Npcap](https://npcap.com) uma vez, marcando *Install Npcap in WinPcap API-compatible Mode* e *Support loopback traffic*. É só para o medidor ler os pacotes do jogo.
 3. Abra o AionCore pelo atalho. No Aion 2, use **modo janela** ou **janela sem bordas**: overlays não aparecem sobre tela cheia exclusiva.
 
