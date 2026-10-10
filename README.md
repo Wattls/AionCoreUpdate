@@ -8,7 +8,7 @@
 
 [![Apresentação do AionCore (clique para assistir)](media/poster.jpg)](media/AionCore-apresentacao.mp4)
 
-▶ *Clique na imagem para assistir à apresentação (1m53s, dados simulados).*
+▶ *Clique na imagem para assistir à apresentação (50 s, dados simulados).*
 
 </div>
 
