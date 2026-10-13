@@ -1,107 +1,147 @@
 <div align="center">
 
+**English** · [Português (Brasil)](README.pt-BR.md) · [Español](README.es.md)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="media/aioncore-logo-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="media/aioncore-logo-light.svg">
   <img alt="AionCore" src="media/aioncore-logo-light.svg" width="340">
 </picture>
 
-**HUD, guia em português e medidor de DPS para o Aion 2.**
+### Find Hidden Cubes, read your Party's DPS and never miss a call.<br>A free companion app for Aion 2 on Windows.
 
-[![Versão](https://img.shields.io/github/v/release/filvoch/AionCoreUpdate?label=vers%C3%A3o&color=1a9bbd)](https://github.com/filvoch/AionCoreUpdate/releases/latest)
+[![Version](https://img.shields.io/github/v/release/filvoch/AionCoreUpdate?label=version&color=1a9bbd)](https://github.com/filvoch/AionCoreUpdate/releases/latest)
 ![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
+![Free](https://img.shields.io/badge/price-free-2ea44f)
 
-[**⬇ Baixar a última versão**](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) · [Todas as versões](https://github.com/filvoch/AionCoreUpdate/releases) · [Site](https://aioncore.pages.dev)
+<a href="https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe"><img alt="Download AionCore for Windows (AionCore-Setup.exe)" src="https://img.shields.io/badge/Download_for_Windows-AionCore--Setup.exe-1a9bbd?style=for-the-badge&logo=windows&logoColor=white"></a>
 
-<img alt="Apresentação do AionCore: o medidor de DPS no visual Faixas e os avisos fora do jogo (dados simulados)" src="media/demo.gif" width="800">
+<sub>About 160 MB installer · updates itself · [All versions](https://github.com/filvoch/AionCoreUpdate/releases) · [Website](https://aioncore.app/en/)</sub>
 
-<sub>Dados simulados.</sub>
+<img alt="Screenshot of the Cube radar, north up: you in the center with an arrow for where you are facing, three Hidden Cubes around you, the nearest one highlighted with a line, and the text &quot;Cube 38 m northeast&quot; and &quot;+2 more · ahead, to the right&quot; (simulated data)" src="media/shot-radar.jpg" width="820">
 
 </div>
 
 > [!NOTE]
-> O medidor precisa do [Npcap](https://npcap.com) e o Aion 2 deve estar em **modo janela** ou **janela sem bordas**. Detalhes em [Como instalar](#como-instalar).
+> The meter needs [Npcap](https://npcap.com), and Aion 2 must run in **Windowed** or **Borderless window** mode. See [Install in 3 steps](#install-in-3-steps).
 
-## Veja em ação
+## Hidden Cube radar
 
-Com som e controles (50 s, dados simulados):
+A small window that opens by itself when the game reports a Hidden Cube near you, and hides again when none are left.
 
-https://github.com/user-attachments/assets/f17309fa-6686-4871-b4fb-590bde3b01d0
+- **Automatic.** On by default: it opens when an unopened Hidden Cube appears and hides about 3 seconds after the last one is gone. The ✕ dismisses only the current cubes; the next one opens the radar again.
+- **North up**, like the in-game minimap, with an arrow for where you are facing. Prefer it to rotate with you? Pick **Turns with you**.
+- **Several cubes at once.** The cube you are tracking gets the big dot and the line; the others are smaller, and the text shows "+N more".
+- **See the game through it.** Radar opacity goes from 30% to 100%.
+- **Alerts that tell you where to go:** at 80, 50, 25 and 10 m, where the cube is from you (ahead, behind, to your right...), and when another player has already opened it.
+- **Next spot.** After a cube is opened, the alert points to the nearest known spawn spot, like "~240 m northeast". The meter ships with 3,722 spots where cubes have spawned (direction and distance are still being checked in game).
 
-## O que é
+Everything is in **Settings › Alerts and events**. The radar shows only cubes the game sends. The game reports your own position only when you use a skill or dash, so without a recent position the radar shows "Cube detected" and asks you to move.
 
-- **AionCore Meter**: medidor de dano e cura em tempo real, com tempo para derrotar o chefe, mortes, histórico de lutas e comparação entre lutas.
-- **Avisos fora do jogo**: convites de grupo e de Expedição, chamados para entrar e avisos de chefe e evento aparecem por cima de qualquer janela. Ao clicar, o AionCore traz o jogo para a frente (ele nunca clica nem aceita nada por você).
-- **Guia**: tradução completa para PT-BR do guia de Kanon, com busca, abas por capítulo e vídeos do YouTube dentro da janela.
-- **Início e atalhos globais**: um painel sobre o jogo com Guia, YouTube e DPS Meter; os atalhos funcionam por cima do jogo e dá para trocar em Início › Atalhos.
+<p align="center"><img alt="Animated demo of the Cube radar: a Hidden Cube to the northeast, ahead of you, gets closer as you move toward it, from 85 m down to 18 m (simulated data)" src="media/demo.gif" width="720"></p>
+
+## Party DPS meter
+
+- **The whole Party at a glance:** one row per player with damage, DPS and share. **HPS** and **Taken** tabs for healing and damage taken. Scope **Me**, **Party**, **Raid** or **Automatic**.
+- **Skill breakdown:** click a name to see hits, crits, back attacks, multi-hits, average, min and max, a chart and the hit log.
+- **Boss timers:** Boss HP in numbers, **Kill in** (estimate from how fast the HP is dropping) and **Enrage in** for bosses with a known enrage timer.
+- **Every fight saved on your PC:** **History**, a summary of each fight, **Compare fights**, **Boss runs**, death recap, and export to JSON, CSV or PNG.
+- **Floating party:** your Party's health in a small window.
+- **Five looks:** Stripes, Classic, Dense, Panel and Glass.
+
+<p align="center"><img alt="Screenshot of the AionCore Meter in the Stripes look during a boss fight: boss HP with Kill in and Enrage in at the top, then one row per player for six players with damage, DPS and share (simulated data, invented names)" src="media/shot-meter.jpg" width="400"></p>
+
+## Out-of-game alerts and Room panel
+
+Alt-tabbed out or game minimized? Party invites, Expedition invites, calls to join and join requests pop up over any window. Click one and AionCore brings the game to the front. It never clicks or accepts anything for you.
+
+The **Room panel** shows who is in the room, their Gear Score and Combat Power, and who is ready.
 
 <table>
   <tr>
-    <td width="33%"><img alt="Medidor de DPS no visual Faixas, com aviso de mecânica de chefe (dados simulados)" src="media/shot-medidor.jpg"></td>
-    <td width="33%"><img alt="Avisos sociais empilhados com classe, nível, GS e PC (dados simulados)" src="media/shot-avisos.jpg"></td>
-    <td width="33%"><img alt="Painel da sala com o botão Ir para o jogo (dados simulados)" src="media/shot-sala.jpg"></td>
+    <td width="50%"><img alt="Screenshot of three stacked out-of-game alert cards: a Call to join, an Expedition invite and a Party invite, each with the player's class, level, Gear Score, Combat Power and server (simulated data, invented names)" src="media/shot-alerts.jpg"></td>
+    <td width="50%"><img alt="Screenshot of the Room panel: four members with Gear Score, Combat Power, level and ready status, one open slot and two join requests (simulated data, invented names)" src="media/shot-room.jpg"></td>
   </tr>
   <tr>
-    <td align="center"><sub>Medidor · visual Faixas</sub></td>
-    <td align="center"><sub>Avisos fora do jogo</sub></td>
-    <td align="center"><sub>Painel da sala</sub></td>
+    <td align="center"><sub>Out-of-game alerts</sub></td>
+    <td align="center"><sub>Room panel</sub></td>
   </tr>
 </table>
 
-## Como instalar
+<sub>Out-of-game alerts and the Room panel are supporter features. See [Free, with optional support](#free-with-optional-support).</sub>
 
-Requisitos: Windows 10 (1809 ou mais novo) ou 11, 64 bits.
+## Boss mechanics
 
-1. [Baixe o instalador](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) (sempre a versão mais recente; notas em [Releases](https://github.com/filvoch/AionCoreUpdate/releases/latest)) e execute. Se o Windows mostrar "O Windows protegeu o computador", veja [a pergunta sobre o aviso](#perguntas-frequentes).
-2. Instale o [Npcap](https://npcap.com) uma vez, marcando *Install Npcap in WinPcap API-compatible Mode* e *Support loopback traffic*. É só para o medidor ler os pacotes do jogo.
-3. Abra o AionCore pelo atalho. No Aion 2, use **modo janela** ou **janela sem bordas**: overlays não aparecem sobre tela cheia exclusiva.
+- **Mechanics panel:** what the boss does and what you should do, by dungeon. Free. Coverage grows with each version, and mechanics not yet checked in game are marked.
+- **On-screen mechanic alerts:** a warning before the hit. Supporters first, everyone from **November 10, 2026**.
 
-## Atualizações
+## Info panel, Home and shortcuts
 
-O AionCore se atualiza sozinho: consulta este repositório, confere a assinatura digital do instalador e instala quando o Aion 2 está fechado. Você pode forçar em *Atualizar agora*. Seus dados e configurações ficam guardados entre as versões.
+- **Info panel:** field boss timers read from the game, events, and an alert a few minutes before your favorite field bosses spawn.
+- **Home:** one screen over the game with the Guide, YouTube and the Meter.
+- **Global shortcuts** (Ctrl+Alt) that work over the game. Change them in **Home › Shortcuts**.
+- **Guide:** Kanon's complete Aion 2 guide, inside the app. The guide text is in Brazilian Portuguese for now.
 
-## Perguntas frequentes
+App and website available in 6 languages: EN, PT-BR, ES, DE, FR, RU (DE, FR and RU are machine-translated and still under review).
+
+## Install in 3 steps
+
+Requirements: Windows 10 (1809 or newer) or 11, 64-bit.
+
+1. [Download the installer](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) and run it. If Windows says "Windows protected your PC", see [the FAQ](#faq).
+2. Install [Npcap](https://npcap.com) once, with *Install Npcap in WinPcap API-compatible Mode* and *Support loopback traffic* checked. The meter uses it to read the game's network traffic.
+3. Open AionCore from the shortcut. In Aion 2, use **Windowed** or **Borderless window**: overlays cannot show over exclusive full screen.
+
+AionCore updates itself. It checks this repository, verifies the installer's digital signature and installs only when Aion 2 is closed. Your settings and fight history are kept between versions.
+
+## Free, with optional support
+
+AionCore is free, with no ads. If you'd like to help, support costs **US$ 15 for 12 months** on Ko-fi: one payment, no auto-renewal. Supporters get new features first. **Everything already released for free stays free forever.**
+
+What supporters get today: out-of-game alerts, the Room panel, meter color themes, the Glass finish over the Dense, Panel and Stripes looks, and early access to on-screen boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
+
+[Support AionCore](https://aioncore.app/en/apoie/)
+
+## Your data
+
+Your fights stay on your PC. Uploading fights to [aioncore.app](https://aioncore.app/en/) (ranking and fight pages) is optional, needs an account and is off by default. Details in the [privacy policy](https://aioncore.app/en/privacidade/).
+
+## FAQ
 
 <details>
-<summary><b>Dá ban?</b></summary>
+<summary><b>Can I get banned?</b></summary>
 
-O medidor lê o tráfego de rede do seu PC e o título da janela do jogo. Não altera arquivos nem a memória do jogo. Mesmo assim, nenhuma ferramenta desse tipo pode garantir o que a política do jogo decide: o risco do uso é seu.
+The meter reads your PC's network traffic and the game window title. It does not change game files or game memory. Even so, no tool of this kind can guarantee what the game's policy decides: use it at your own risk.
 </details>
 
 <details>
-<summary><b>É grátis?</b></summary>
+<summary><b>Which servers and regions work?</b></summary>
 
-Sim, o AionCore é gratuito, sem anúncios. Existe um apoio opcional (valor único por ano) que libera novidades antes para quem apoia. O que já foi publicado grátis continua grátis.
+Built and tested on Aion 2 Global (South America servers). Other regions (Taiwan, Korea) may work, but are not guaranteed yet.
 </details>
 
 <details>
-<summary><b>Quais servidores e regiões funcionam?</b></summary>
+<summary><b>Is the meter accurate?</b></summary>
 
-Feito e testado no Aion 2 Global (servidor 2404 Lumiel, América do Sul). Em outras regiões (Taiwan, Coreia) pode funcionar, mas ainda não é garantido.
+It counts what the game sends. In some cases the meter cannot see everything, and it tells you when it is not reading the game. The website explains how it measures: [accuracy](https://aioncore.app/en/precisao/).
 </details>
 
 <details>
-<summary><b>O que preciso instalar?</b></summary>
+<summary><b>Do I need to run it as administrator?</b></summary>
 
-Windows 10 (1809 ou mais novo) ou 11, 64 bits, e o [Npcap](https://npcap.com), que o medidor usa para ler os pacotes do jogo. No instalador do Npcap, marque o modo compatível com WinPcap e o suporte a loopback. O medidor também usa o WebView2, que já vem no Windows 11. O instalador do AionCore avisa se faltar algo, mas não baixa nem instala nada de terceiros.
+No. AionCore installs for your user only and never asks for administrator rights on its own. If your Npcap was installed with *Restrict Npcap driver's access to Administrators only*, the meter shows a **Reopen as administrator** button (just for that time). To never need it, reinstall Npcap without that option.
 </details>
 
 <details>
-<summary><b>Precisa rodar como administrador?</b></summary>
+<summary><b>The meter disappears when the game is in front.</b></summary>
 
-Não. O AionCore instala só para o seu usuário e nunca pede administrador sozinho. Se o seu Npcap foi instalado com a opção *Restrict Npcap driver's access to Administrators only*, o medidor mostra o botão **Reabrir como administrador** (vale só daquela vez). Para nunca precisar, reinstale o Npcap sem marcar essa opção.
+The game is in exclusive **Full screen**, and Windows shows no window on top of it. In Aion 2's video options, switch to **Borderless window**.
 </details>
 
 <details>
-<summary><b>O medidor some quando o jogo está na frente.</b></summary>
+<summary><b>Windows or my antivirus warned me during install.</b></summary>
 
-O jogo está em **Tela cheia** exclusiva, e o Windows não mostra janelas por cima dela. Nas opções de vídeo do Aion 2, troque para **Janela sem bordas**.
-</details>
-
-<details>
-<summary><b>O Windows ou o antivírus avisou ao instalar.</b></summary>
-
-O instalador não tem assinatura digital paga, então o Windows não conhece o editor e mostra "O Windows protegeu o computador". Clique em **Mais informações** e depois em **Executar assim mesmo**. Um antivírus pode pedir confirmação pelo mesmo motivo. Para conferir que o arquivo é o original, compare o SHA-256 que está em `latest.json` (nos Assets da versão) com o resultado de:
+The installer has no paid code-signing certificate, so Windows does not know the publisher and shows "Windows protected your PC". Click **More info**, then **Run anyway**. An antivirus may ask for confirmation for the same reason. To check that the file is the original, compare the SHA-256 in `latest.json` (in the release Assets) with the output of:
 
 ```powershell
 Get-FileHash .\AionCore-Setup.exe
@@ -109,28 +149,28 @@ Get-FileHash .\AionCore-Setup.exe
 </details>
 
 <details>
-<summary><b>O que sai do meu PC?</b></summary>
+<summary><b>What leaves my PC?</b></summary>
 
-As lutas não saem do PC sem você ligar o envio (opcional, desligado por padrão). O medidor baixa os ícones das habilidades da CDN do jogo e consulta este repositório para saber se há versão nova. A atualização automática nunca instala com o Aion 2 aberto.
+Fights leave your PC only if you turn on uploading (optional, off by default). The meter downloads skill icons from the game's CDN and checks this repository for new versions. Automatic updates never install with Aion 2 open.
 </details>
 
 <details>
-<summary><b>Como desinstalo? Perco meus dados?</b></summary>
+<summary><b>How do I uninstall? Do I lose my data?</b></summary>
 
-*Configurações do Windows › Aplicativos instalados › AionCore*. O desinstalador pergunta se apaga também seus dados (histórico, configurações); por padrão, mantém. Instalar uma versão nova por cima também mantém tudo.
+*Windows Settings › Installed apps › AionCore*. The uninstaller asks whether to delete your data too (history, settings); by default it keeps them. Installing a new version over the old one also keeps everything.
 </details>
 
 <details>
-<summary><b>É oficial?</b></summary>
+<summary><b>Is it official? Is the code open?</b></summary>
 
-Não. É um projeto independente, feito por um jogador, sem afiliação nem endosso da NCSOFT. Aion 2, seus ícones, nomes e artes pertencem à NCSOFT e a seus licenciantes.
+No to both. AionCore is an independent project made by a player, not affiliated with or endorsed by NCSOFT. The source code is not public: this repository holds only the published installers and this page.
 </details>
 
-## Este repositório
+## Bugs and contact
 
-Guarda apenas os instaladores publicados (aba [Releases](https://github.com/filvoch/AionCoreUpdate/releases)) e esta página. O código-fonte não é público.
+Open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app. In the app: **Settings › Help and community**.
 
-## Créditos
+## Credits
 
-AionCore por **Guilherme Filvoch (Simavi)**. Guia original por [Kanon](https://www.youtube.com/@kanonxo), traduzido para PT-BR por Simavi.
-Projeto de fã, sem vínculo com a NCSOFT. Aion 2 e seus ícones e imagens são marcas e arte da NCSOFT.
+AionCore by **Guilherme Filvoch (Simavi)**. Original guide by [Kanon](https://www.youtube.com/@kanonxo), translated into Brazilian Portuguese by Simavi.
+Independent fan project, not affiliated with NCSOFT. Aion 2 and its icons, names and art belong to NCSOFT and its licensors.
