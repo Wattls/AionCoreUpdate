@@ -95,7 +95,7 @@ AionCore se actualiza solo: consulta este repositorio, comprueba la firma digita
 
 ## Gratis, con apoyo opcional
 
-AionCore es gratis y sin anuncios. Puedes ayudar con cualquier monto en Ko-fi. Una sola donación de **US$ 15** te convierte en **persona que apoya durante 12 meses** (sin renovación automática), y recibes **1 año de la insignia de apoyo**, **las actualizaciones primero** y **algunas funciones exclusivas para quienes ayudan a mantener AionCore**. **Todo lo que ya salió gratis sigue gratis para siempre.**
+AionCore es gratis y sin anuncios. Puedes ayudar con cualquier monto en Ko-fi. Un pago único de **US$ 15 o más, en dólares** (el artículo de la tienda de Ko-fi o una donación única) te convierte en **persona que apoya durante 12 meses** (sin renovación automática). Los importes menores son un agradecimiento, sin ventajas. Recibes **1 año de la insignia de apoyo**, **las actualizaciones primero** y **algunas funciones exclusivas para quienes ayudan a mantener AionCore**. **Todo lo que ya salió gratis sigue gratis para siempre.**
 
 Lo que tiene hoy quien apoya: avisos fuera del juego, Panel de sala, temas de color del medidor, acabado Cristal sobre los visuales Denso, Panel y Franjas, y acceso anticipado a los avisos de mecánicas de jefe (hasta el 10/11/2026) y a los avisos de la barra de guardia del jefe (hasta el 11/11/2026).
 

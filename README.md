@@ -95,7 +95,7 @@ AionCore updates itself. It checks this repository, verifies the installer's dig
 
 ## Free, with optional support
 
-AionCore is free, with no ads. You can help with any amount on Ko-fi. A single donation of **US$ 15** makes you a **Supporter for 12 months** (no auto-renewal), and you get **1 year of the Supporter badge**, **updates first** and **some features exclusive to the people who help keep AionCore running**. **Everything already released for free stays free forever.**
+AionCore is free, with no ads. You can help with any amount on Ko-fi. A one-time payment of **US$ 15 or more, in US dollars** (the Ko-fi shop item or a one-time donation) makes you a **Supporter for 12 months** (no auto-renewal). Smaller amounts are a thank-you with no perks. You get **1 year of the Supporter badge**, **updates first** and **some features exclusive to the people who help keep AionCore running**. **Everything already released for free stays free forever.**
 
 What supporters get today: out-of-game alerts, the Room panel, meter color themes, the Glass finish over the Dense, Panel and Stripes looks, and early access to on-screen boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
 
