@@ -102,7 +102,7 @@ O AionCore se atualiza sozinho: consulta este repositório, confere a assinatura
 
 ## Grátis, com apoio opcional
 
-O AionCore é grátis, sem anúncios. Se quiser ajudar, o apoio custa **US$ 15 por 12 meses** no Ko-fi: um pagamento só, sem renovação automática. Quem apoia recebe as novidades primeiro. **Tudo o que já saiu grátis continua grátis para sempre.**
+O AionCore é grátis, sem anúncios. Se quiser ajudar, o apoio custa **US$ 15 por 12 meses** no Ko-fi: um pagamento só, sem renovação automática. Em troca você recebe **1 ano do selo de Apoiador**, **as atualizações primeiro** e **alguns recursos exclusivos para quem ajuda a manter o AionCore**. **Tudo o que já saiu grátis continua grátis para sempre.**
 
 O que o apoiador tem hoje: avisos fora do jogo, Painel da sala, temas de cor do medidor, acabamento Vidro sobre os visuais Denso, Painel e Faixas, e acesso antecipado aos avisos de mecânica de chefe (até 10/11/2026) e aos avisos da barra de guarda do chefe (até 11/11/2026).
 
