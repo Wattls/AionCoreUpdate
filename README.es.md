@@ -78,9 +78,8 @@ El **Panel de sala** muestra quién está en la sala, el GS y el poder de combat
 ## Panel de información, Inicio y atajos
 
 - **Panel de información:** horarios de los jefes de campo leídos del juego, eventos y un aviso unos minutos antes de que aparezcan tus jefes de campo favoritos.
-- **Inicio:** una pantalla sobre el juego con la Guía, YouTube y el medidor.
+- **Inicio:** una pantalla sobre el juego con YouTube y el medidor.
 - **Atajos globales** (Ctrl+Alt) que funcionan sobre el juego. Cámbialos en **Inicio › Atajos**.
-- **Guía:** la guía completa de Aion 2 de Kanon, dentro de la app. Por ahora, el texto de la guía está en portugués de Brasil.
 
 App y sitio web en 6 idiomas: EN, PT-BR, ES, DE, FR, RU (DE, FR y RU son traducción automática, aún en revisión).
 
@@ -172,5 +171,5 @@ Abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues) o escribe a co
 
 ## Créditos
 
-AionCore por **Guilherme Filvoch (Simavi)**. Guía original de [Kanon](https://www.youtube.com/@kanonxo), traducida al portugués de Brasil por Simavi.
+AionCore por **Guilherme Filvoch (Simavi)**.
 Proyecto independiente de fans, sin vínculo con NCSOFT. Aion 2 y sus íconos, nombres y artes pertenecen a NCSOFT y a sus licenciantes.

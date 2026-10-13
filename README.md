@@ -78,9 +78,8 @@ The **Room panel** shows who is in the room, their Gear Score and Combat Power, 
 ## Info panel, Home and shortcuts
 
 - **Info panel:** field boss timers read from the game, events, and an alert a few minutes before your favorite field bosses spawn.
-- **Home:** one screen over the game with the Guide, YouTube and the Meter.
+- **Home:** one screen over the game with YouTube and the Meter.
 - **Global shortcuts** (Ctrl+Alt) that work over the game. Change them in **Home › Shortcuts**.
-- **Guide:** Kanon's complete Aion 2 guide, inside the app. The guide text is in Brazilian Portuguese for now.
 
 App and website available in 6 languages: EN, PT-BR, ES, DE, FR, RU (DE, FR and RU are machine-translated and still under review).
 
@@ -172,5 +171,5 @@ Open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to co
 
 ## Credits
 
-AionCore by **Guilherme Filvoch (Simavi)**. Original guide by [Kanon](https://www.youtube.com/@kanonxo), translated into Brazilian Portuguese by Simavi.
+AionCore by **Guilherme Filvoch (Simavi)**.
 Independent fan project, not affiliated with NCSOFT. Aion 2 and its icons, names and art belong to NCSOFT and its licensors.

@@ -78,9 +78,8 @@ O **Painel da sala** mostra quem está na sala, o GS e o poder de combate de cad
 ## Painel, Início e atalhos
 
 - **Painel:** horários dos chefes de campo lidos do jogo, eventos e um alerta alguns minutos antes de nascerem os seus chefes de campo favoritos.
-- **Início:** uma tela por cima do jogo com o Guia, o YouTube e o medidor.
+- **Início:** uma tela por cima do jogo com o YouTube e o medidor.
 - **Atalhos globais** (Ctrl+Alt) que funcionam por cima do jogo. Troque em **Início › Atalhos**.
-- **Guia:** o guia completo do Aion 2 de Kanon, traduzido para PT-BR, dentro do app.
 
 App e site em 6 idiomas: EN, PT-BR, ES, DE, FR, RU (DE, FR e RU são tradução por máquina, ainda em revisão).
 
@@ -178,5 +177,5 @@ Abra uma [issue](https://github.com/filvoch/AionCoreUpdate/issues) ou escreva pa
 
 ## Créditos
 
-AionCore por **Guilherme Filvoch (Simavi)**. Guia original por [Kanon](https://www.youtube.com/@kanonxo), traduzido para PT-BR por Simavi.
+AionCore por **Guilherme Filvoch (Simavi)**.
 Projeto de fã independente, sem vínculo com a NCSOFT. Aion 2 e seus ícones, nomes e artes pertencem à NCSOFT e a seus licenciantes.
