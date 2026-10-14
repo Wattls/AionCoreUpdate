@@ -47,7 +47,7 @@ Everything is in **Settings › Alerts and events**. The radar shows only cubes 
 - **Boss timers:** Boss HP in numbers, **Kill in** (estimate from how fast the HP is dropping) and **Enrage in** for bosses with a known enrage timer.
 - **Every fight saved on your PC:** **History**, a summary of each fight, **Compare fights**, **Boss runs**, death recap, and export to JSON, CSV or PNG.
 - **Floating party:** your Party's health in a small window.
-- **Five looks:** Stripes, Classic, Dense, Panel and Glass.
+- **Five free looks:** Stripes, Classic, Dense, Panel and Glass, plus the Glass finish over Dense, Panel and Stripes.
 
 <p align="center"><img alt="Screenshot of the AionCore Meter in the Stripes look during a boss fight: boss HP with Kill in and Enrage in at the top, then one row per player for six players with damage, DPS and share (simulated data, invented names)" src="media/shot-meter.jpg" width="400"></p>
 
@@ -75,11 +75,11 @@ The **Room panel** shows who is in the room, their Gear Score and Combat Power, 
 - **Mechanics panel:** what the boss does and what you should do, by dungeon. Free. Coverage grows with each version, and mechanics not yet checked in game are marked.
 - **On-screen mechanic alerts:** a warning before the hit. Supporters first, everyone from **November 10, 2026**.
 
-## Info panel, Home and shortcuts
+## Main window, Schedule and shortcuts
 
-- **Info panel:** field boss timers read from the game, events, and an alert a few minutes before your favorite field bosses spawn.
-- **Home:** one screen over the game with YouTube and the Meter.
-- **Global shortcuts** (Ctrl+Alt) that work over the game. Change them in **Home › Shortcuts**.
+- **Main window:** Home, Checklist, Meter, Dungeons, Schedule and Pets in one window. Open it from the top bar, the Windows tray or Ctrl+Alt+A.
+- **Schedule (in validation):** the week's events with a countdown, and field boss times read from the game when you open the world map; the **Timers** window shows the countdown over the game. It passed the automated tests but has not been checked live in game yet.
+- **Global shortcuts** (Ctrl+Alt) that work over the game. Change them in **Settings › Overlays › Bar › Shortcuts for the bar and the overlays**.
 
 App and website available in 6 languages: EN, PT-BR, ES, DE, FR, RU (DE, FR and RU are machine-translated and still under review).
 
@@ -91,19 +91,19 @@ Requirements: Windows 10 (1809 or newer) or 11, 64-bit.
 2. Install [Npcap](https://npcap.com) once, with *Install Npcap in WinPcap API-compatible Mode* and *Support loopback traffic* checked. The meter uses it to read the game's network traffic.
 3. Open AionCore from the shortcut. In Aion 2, use **Windowed** or **Borderless window**: overlays cannot show over exclusive full screen.
 
-AionCore updates itself. It checks this repository, verifies the installer's digital signature and installs only when Aion 2 is closed. Your settings and fight history are kept between versions.
+AionCore updates itself. It checks this repository, verifies the installer's digital signature and does not install by itself while Aion 2 is open. If you click **Update** with the game open, it asks you before installing (the meter loses the fight in progress). Your settings and fight history are kept between versions.
 
 ## Free, with optional support
 
-AionCore is free, with no ads. You can help with any amount on Ko-fi. A one-time payment of **US$ 15 or more, in US dollars** (the Ko-fi shop item or a one-time donation) makes you a **Supporter for 12 months** (no auto-renewal). Smaller amounts are a thank-you with no perks. You get **1 year of the Supporter badge**, **updates first** and **some features exclusive to the people who help keep AionCore running**. **Everything already released for free stays free forever.**
+AionCore is free, with no paid advertising; there is a partner card (affiliate link), flagged on screen. You can help with any amount on Ko-fi. A one-time payment of **US$ 15 or more, in US dollars** (the Ko-fi shop item or a one-time donation) makes you a **Supporter for 12 months** (no auto-renewal). Smaller amounts are a thank-you with no perks. You get **1 year of the Supporter badge**, **updates first** and **some features exclusive to the people who help keep AionCore running**. **Everything already released for free stays free forever.**
 
-What supporters get today: out-of-game alerts, the Room panel, meter color themes, the Glass finish over the Dense, Panel and Stripes looks, and early access to on-screen boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
+What supporters get today: out-of-game alerts, the Room panel, the party applicant card, meter color themes and early access to on-screen boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
 
 [Support AionCore](https://aioncore.app/en/apoie/)
 
 ## Your data
 
-Your fights stay on your PC. Uploading fights to [aioncore.app](https://aioncore.app/en/) (ranking and fight pages) is optional, needs an account and is off by default. Details in the [privacy policy](https://aioncore.app/en/privacidade/).
+Your fights stay on your PC. Without connecting an account, no fight leaves it. Connecting an account is optional; when you connect, a notice shows what goes to [aioncore.app](https://aioncore.app/en/) (ranking and fight pages) and uploading boss fights and inspections turns on. Turn it off in **Settings › Account and upload**. Details in the [privacy policy](https://aioncore.app/en/privacidade/).
 
 ## FAQ
 
@@ -128,7 +128,13 @@ It counts what the game sends. In some cases the meter cannot see everything, an
 <details>
 <summary><b>Do I need to run it as administrator?</b></summary>
 
-No. AionCore installs for your user only and never asks for administrator rights on its own. If your Npcap was installed with *Restrict Npcap driver's access to Administrators only*, the meter shows a **Reopen as administrator** button (just for that time). To never need it, reinstall Npcap without that option.
+Not by default: AionCore installs for your user only and opens without asking for administrator rights. Three cases change that:
+
+- If your Npcap was installed with *Restrict Npcap driver's access to Administrators only*, the meter shows a **Reopen as administrator** button (just for that time). To never need it, reinstall Npcap without that option.
+- **In the game menus** (hide the bar and the overlays when a game menu opens): to see whether Alt and Esc are pressed while the game is in front, AionCore must run as administrator. It reads only those two keys, only with Aion 2 in front, and nothing is recorded or sent. Without administrator rights, it goes by the game's cursor.
+- If Aion 2 runs as administrator, clicking an out-of-game alert brings the game to the front only when AionCore runs as administrator too.
+
+For these cases there is **Settings › General › Open AionCore as administrator**, off by default. When you turn it on, Windows asks for permission (UAC).
 </details>
 
 <details>
@@ -150,7 +156,7 @@ Get-FileHash .\AionCore-Setup.exe
 <details>
 <summary><b>What leaves my PC?</b></summary>
 
-Fights leave your PC only if you turn on uploading (optional, off by default). The meter downloads skill icons from the game's CDN and checks this repository for new versions. Automatic updates never install with Aion 2 open.
+Without a connected account, no fight leaves your PC. With an account connected, boss fights and inspections go to aioncore.app, as the notice says before it turns on; turn it off in **Settings › Account and upload**. The meter downloads skill icons from the game's CDN and checks this repository for new versions. Updates do not install by themselves while Aion 2 is open.
 </details>
 
 <details>
@@ -167,7 +173,7 @@ No to both. AionCore is an independent project made by a player, not affiliated 
 
 ## Bugs and contact
 
-Open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app. In the app: **Settings › Help and community**.
+Open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app. In the app: **Settings › Help and diagnostics**.
 
 ## Credits
 

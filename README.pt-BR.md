@@ -47,7 +47,7 @@ Tudo fica em **Configurações › Avisos e eventos**. O radar mostra só os cub
 - **Tempos do chefe:** HP do chefe em números, **Derrota em** (estimativa pela velocidade com que o HP cai) e **Fúria em** para chefes com tempo de fúria conhecido.
 - **Toda luta guardada no seu PC:** **Histórico**, resumo de cada luta, **Comparar lutas**, **Corridas de chefes**, recapitulação da morte e exportar em JSON, CSV ou PNG.
 - **Grupo flutuante:** a vida do seu grupo numa janela pequena.
-- **Cinco visuais:** Faixas, Clássico, Denso, Painel e Vidro.
+- **Cinco visuais grátis:** Faixas, Clássico, Denso, Painel e Vidro, e o acabamento Vidro sobre Denso, Painel e Faixas.
 
 <p align="center"><img alt="Captura de tela do AionCore Meter no visual Faixas numa luta de chefe: no alto o HP do chefe com Derrota em e Fúria em, e embaixo uma linha por jogador, seis jogadores, com dano, DPS e parte (app em inglês, dados simulados, nomes inventados)" src="media/shot-meter.jpg" width="400"></p>
 
@@ -75,11 +75,11 @@ O **Painel da sala** mostra quem está na sala, o GS e o poder de combate de cad
 - **Painel de mecânicas:** o que o chefe faz e o que você deve fazer, por DG. Grátis. A cobertura cresce a cada versão, e mecânica ainda não conferida no jogo vem marcada.
 - **Avisos de mecânica na tela:** o aviso antes do golpe. Apoiadores primeiro, todo mundo a partir de **10 de novembro de 2026**.
 
-## Painel, Início e atalhos
+## Janela principal, Agenda e atalhos
 
-- **Painel:** horários dos chefes de campo lidos do jogo, eventos e um alerta alguns minutos antes de nascerem os seus chefes de campo favoritos.
-- **Início:** uma tela por cima do jogo com o YouTube e o medidor.
-- **Atalhos globais** (Ctrl+Alt) que funcionam por cima do jogo. Troque em **Início › Atalhos**.
+- **Janela principal:** Início, Checklist, Medidor, Masmorras, Agenda e Pets numa janela só. Abre pela barra do topo, pela bandeja do Windows ou por Ctrl+Alt+A.
+- **Agenda (em validação):** eventos da semana com contagem regressiva e os horários dos chefes de campo lidos do jogo ao abrir o mapa-múndi; a janela **Timers** mostra a contagem por cima do jogo. Passou nos testes automáticos, mas ainda não foi conferida ao vivo no jogo.
+- **Atalhos globais** (Ctrl+Alt) que funcionam por cima do jogo. Troque em **Configurações › Overlays › Barra › Atalhos da barra e dos overlays**.
 
 App e site em 6 idiomas: EN, PT-BR, ES, DE, FR, RU (DE, FR e RU são tradução por máquina, ainda em revisão).
 
@@ -97,19 +97,19 @@ Requisitos: Windows 10 (1809 ou mais novo) ou 11, 64 bits.
 2. Instale o [Npcap](https://npcap.com) uma vez, marcando *Install Npcap in WinPcap API-compatible Mode* e *Support loopback traffic*. O medidor usa o Npcap para ler o tráfego de rede do jogo.
 3. Abra o AionCore pelo atalho. No Aion 2, use **modo janela** ou **janela sem bordas**: overlays não aparecem sobre tela cheia exclusiva.
 
-O AionCore se atualiza sozinho: consulta este repositório, confere a assinatura digital do instalador e só instala com o Aion 2 fechado. Suas configurações e o histórico de lutas ficam guardados entre as versões.
+O AionCore se atualiza sozinho: consulta este repositório, confere a assinatura digital do instalador e não instala sozinho com o Aion 2 aberto. Se você clicar em **Atualizar** com o jogo aberto, ele pergunta antes de instalar (o medidor perde a luta em andamento). Suas configurações e o histórico de lutas ficam guardados entre as versões.
 
 ## Grátis, com apoio opcional
 
-O AionCore é grátis, sem anúncios. Você pode ajudar com qualquer valor no Ko-fi. Um pagamento único de **US$ 15 ou mais, em dólar** (o item da loja do Ko-fi ou uma doação única) faz de você **Apoiador por 12 meses** (sem renovação automática). Valores menores são um agradecimento, sem benefícios. Você recebe **1 ano do selo de Apoiador**, **as atualizações primeiro** e **alguns recursos exclusivos para quem ajuda a manter o AionCore**. **Tudo o que já saiu grátis continua grátis para sempre.**
+O AionCore é grátis, sem propaganda paga; há um cartão de parceiro (link de afiliado), avisado na tela. Você pode ajudar com qualquer valor no Ko-fi. Um pagamento único de **US$ 15 ou mais, em dólar** (o item da loja do Ko-fi ou uma doação única) faz de você **Apoiador por 12 meses** (sem renovação automática). Valores menores são um agradecimento, sem benefícios. Você recebe **1 ano do selo de Apoiador**, **as atualizações primeiro** e **alguns recursos exclusivos para quem ajuda a manter o AionCore**. **Tudo o que já saiu grátis continua grátis para sempre.**
 
-O que o apoiador tem hoje: avisos fora do jogo, Painel da sala, temas de cor do medidor, acabamento Vidro sobre os visuais Denso, Painel e Faixas, e acesso antecipado aos avisos de mecânica de chefe (até 10/11/2026) e aos avisos da barra de guarda do chefe (até 11/11/2026).
+O que o apoiador tem hoje: avisos fora do jogo, Painel da sala, cartão do candidato ao grupo, temas de cor do medidor e acesso antecipado aos avisos de mecânica de chefe (até 10/11/2026) e aos avisos da barra de guarda do chefe (até 11/11/2026).
 
 [Apoie o AionCore](https://aioncore.app/apoie/)
 
 ## Seus dados
 
-Suas lutas ficam no seu PC. Enviar lutas ao [aioncore.app](https://aioncore.app) (ranking e páginas de luta) é opcional, precisa de conta e vem desligado. Detalhes na [política de privacidade](https://aioncore.app/privacidade/).
+Suas lutas ficam no seu PC. Sem conectar uma conta, nenhuma luta sai dele. Conectar a conta é opcional; ao conectar, um aviso mostra o que vai para o [aioncore.app](https://aioncore.app) (ranking e páginas de luta) e o envio das lutas de chefe e das inspeções liga. Desliga em **Configurações › Conta e envio**. Detalhes na [política de privacidade](https://aioncore.app/privacidade/).
 
 ## Perguntas frequentes
 
@@ -134,7 +134,13 @@ Ele conta o que o jogo envia. Em alguns casos o medidor não enxerga tudo, e ele
 <details>
 <summary><b>Precisa rodar como administrador?</b></summary>
 
-Não. O AionCore instala só para o seu usuário e nunca pede permissão de administrador por conta própria. Se o seu Npcap foi instalado com a opção *Restrict Npcap driver's access to Administrators only*, o medidor mostra o botão **Reabrir como administrador** (vale só daquela vez). Para nunca precisar, reinstale o Npcap sem marcar essa opção.
+Não por padrão: o AionCore instala só para o seu usuário e abre sem pedir permissão de administrador. Três casos mudam isso:
+
+- Se o seu Npcap foi instalado com a opção *Restrict Npcap driver's access to Administrators only*, o medidor mostra o botão **Reabrir como administrador** (vale só daquela vez). Para nunca precisar, reinstale o Npcap sem marcar essa opção.
+- **Nos menus do jogo** (esconder a barra e os overlays quando um menu do jogo abre): para ver se o Alt e o Esc estão apertados com o jogo na frente, o AionCore precisa rodar como administrador. Ele lê só essas duas teclas, só com o Aion 2 na frente, e nada é gravado nem enviado. Sem administrador, ele se guia pelo cursor do jogo.
+- Se o Aion 2 roda como administrador, o clique num aviso fora do jogo só traz o jogo para a frente se o AionCore também rodar como administrador.
+
+Para esses casos existe **Configurações › Geral › Abrir o AionCore como administrador**, desligado por padrão. Ao ligar, o Windows pede a permissão (UAC).
 </details>
 
 <details>
@@ -156,7 +162,7 @@ Get-FileHash .\AionCore-Setup.exe
 <details>
 <summary><b>O que sai do meu PC?</b></summary>
 
-As lutas só saem do PC se você ligar o envio (opcional, desligado por padrão). O medidor baixa os ícones das habilidades da CDN do jogo e consulta este repositório para saber se há versão nova. A atualização automática nunca instala com o Aion 2 aberto.
+Sem conta conectada, nenhuma luta sai do PC. Com a conta conectada, vão ao aioncore.app as lutas de chefe e as inspeções, como diz o aviso antes de ligar; desliga em **Configurações › Conta e envio**. O medidor baixa os ícones das habilidades da CDN do jogo e consulta este repositório para saber se há versão nova. A atualização não instala sozinha com o Aion 2 aberto.
 </details>
 
 <details>
@@ -173,7 +179,7 @@ Não e não. O AionCore é um projeto independente, feito por um jogador, sem af
 
 ## Bugs e contato
 
-Abra uma [issue](https://github.com/filvoch/AionCoreUpdate/issues) ou escreva para contato@aioncore.app. No app: **Configurações › Ajuda e comunidade**.
+Abra uma [issue](https://github.com/filvoch/AionCoreUpdate/issues) ou escreva para contato@aioncore.app. No app: **Configurações › Ajuda e diagnóstico**.
 
 ## Créditos
 

@@ -47,7 +47,7 @@ Todo está en **Configuración › Avisos y eventos**. El radar muestra solo los
 - **Tiempos del jefe:** HP del jefe en números, **Derrota en** (estimación según lo rápido que baja el HP) y **Furia en** para jefes con tiempo de furia conocido.
 - **Cada combate guardado en tu PC:** **Historial**, resumen de cada combate, **Comparar combates**, **Runs de jefes**, resumen de tu muerte y exportar a JSON, CSV o PNG.
 - **Grupo flotante:** la vida de tu grupo en una ventana pequeña.
-- **Cinco visuales:** Franjas, Clásico, Denso, Panel y Cristal.
+- **Cinco visuales gratis:** Franjas, Clásico, Denso, Panel y Cristal, y el acabado Cristal sobre Denso, Panel y Franjas.
 
 <p align="center"><img alt="Captura de pantalla de AionCore Meter en el visual Franjas durante un combate contra un jefe: arriba el HP del jefe con Derrota en y Furia en, y debajo una fila por jugador, seis jugadores, con daño, DPS y porcentaje (app en inglés, datos simulados, nombres inventados)" src="media/shot-meter.jpg" width="400"></p>
 
@@ -75,11 +75,11 @@ El **Panel de sala** muestra quién está en la sala, el GS y el poder de combat
 - **Panel de mecánicas:** lo que hace el jefe y lo que debes hacer tú, por mazmorra. Gratis. La cobertura crece con cada versión, y las mecánicas aún no comprobadas en el juego vienen marcadas.
 - **Avisos de mecánicas en pantalla:** el aviso antes del golpe. Primero para quien apoya, para todos a partir del **10 de noviembre de 2026**.
 
-## Panel de información, Inicio y atajos
+## Ventana principal, Agenda y atajos
 
-- **Panel de información:** horarios de los jefes de campo leídos del juego, eventos y un aviso unos minutos antes de que aparezcan tus jefes de campo favoritos.
-- **Inicio:** una pantalla sobre el juego con YouTube y el medidor.
-- **Atajos globales** (Ctrl+Alt) que funcionan sobre el juego. Cámbialos en **Inicio › Atajos**.
+- **Ventana principal:** Inicio, Checklist, Medidor, Mazmorras, Agenda y Mascotas en una sola ventana. Se abre desde la barra superior, la bandeja de Windows o con Ctrl+Alt+A.
+- **Agenda (en validación):** los eventos de la semana con cuenta regresiva y los horarios de los jefes de campo leídos del juego al abrir el mapa del mundo; la ventana **Temporizadores** muestra la cuenta regresiva sobre el juego. Pasó las pruebas automáticas, pero todavía no se comprobó en vivo en el juego.
+- **Atajos globales** (Ctrl+Alt) que funcionan sobre el juego. Cámbialos en **Configuración › Overlays › Barra › Atajos de la barra y de los overlays**.
 
 App y sitio web en 6 idiomas: EN, PT-BR, ES, DE, FR, RU (DE, FR y RU son traducción automática, aún en revisión).
 
@@ -91,19 +91,19 @@ Requisitos: Windows 10 (1809 o más nuevo) u 11, 64 bits.
 2. Instala [Npcap](https://npcap.com) una vez, marcando *Install Npcap in WinPcap API-compatible Mode* y *Support loopback traffic*. El medidor lo usa para leer el tráfico de red del juego.
 3. Abre AionCore desde el acceso directo. En Aion 2, usa **Ventana** o **Ventana sin bordes**: los overlays no aparecen sobre la pantalla completa exclusiva.
 
-AionCore se actualiza solo: consulta este repositorio, comprueba la firma digital del instalador y solo instala con Aion 2 cerrado. Tu configuración y tu historial de combates se conservan entre versiones.
+AionCore se actualiza solo: consulta este repositorio, comprueba la firma digital del instalador y no se instala por sí solo mientras Aion 2 está abierto. Si haces clic en **Actualizar** con el juego abierto, te pregunta antes de instalar (el medidor pierde el combate en curso). Tu configuración y tu historial de combates se conservan entre versiones.
 
 ## Gratis, con apoyo opcional
 
-AionCore es gratis y sin anuncios. Puedes ayudar con cualquier monto en Ko-fi. Un pago único de **US$ 15 o más, en dólares** (el artículo de la tienda de Ko-fi o una donación única) te convierte en **persona que apoya durante 12 meses** (sin renovación automática). Los importes menores son un agradecimiento, sin ventajas. Recibes **1 año de la insignia de apoyo**, **las actualizaciones primero** y **algunas funciones exclusivas para quienes ayudan a mantener AionCore**. **Todo lo que ya salió gratis sigue gratis para siempre.**
+AionCore es gratis, sin publicidad pagada; hay una tarjeta de socio (enlace de afiliado), avisada en pantalla. Puedes ayudar con cualquier monto en Ko-fi. Un pago único de **US$ 15 o más, en dólares** (el artículo de la tienda de Ko-fi o una donación única) te convierte en **persona que apoya durante 12 meses** (sin renovación automática). Los importes menores son un agradecimiento, sin ventajas. Recibes **1 año de la insignia de apoyo**, **las actualizaciones primero** y **algunas funciones exclusivas para quienes ayudan a mantener AionCore**. **Todo lo que ya salió gratis sigue gratis para siempre.**
 
-Lo que tiene hoy quien apoya: avisos fuera del juego, Panel de sala, temas de color del medidor, acabado Cristal sobre los visuales Denso, Panel y Franjas, y acceso anticipado a los avisos de mecánicas de jefe (hasta el 10/11/2026) y a los avisos de la barra de guardia del jefe (hasta el 11/11/2026).
+Lo que tiene hoy quien apoya: avisos fuera del juego, Panel de sala, tarjeta del candidato al grupo, temas de color del medidor y acceso anticipado a los avisos de mecánicas de jefe (hasta el 10/11/2026) y a los avisos de la barra de guardia del jefe (hasta el 11/11/2026).
 
 [Apoya a AionCore](https://aioncore.app/es/apoie/)
 
 ## Tus datos
 
-Tus combates se quedan en tu PC. Enviar combates a [aioncore.app](https://aioncore.app/es/) (clasificación y páginas de combate) es opcional, necesita una cuenta y viene desactivado. Detalles en la [política de privacidad](https://aioncore.app/es/privacidade/).
+Tus combates se quedan en tu PC. Sin conectar una cuenta, ningún combate sale de él. Conectar la cuenta es opcional; al conectarla, un aviso muestra lo que va a [aioncore.app](https://aioncore.app/es/) (clasificación y páginas de combate) y se activa el envío de los combates de jefe y de las inspecciones. Se desactiva en **Configuración › Cuenta y envío**. Detalles en la [política de privacidad](https://aioncore.app/es/privacidade/).
 
 ## Preguntas frecuentes
 
@@ -128,7 +128,13 @@ Cuenta lo que envía el juego. En algunos casos el medidor no ve todo, y avisa c
 <details>
 <summary><b>¿Hay que ejecutarlo como administrador?</b></summary>
 
-No. AionCore se instala solo para tu usuario y nunca pide permisos de administrador por su cuenta. Si tu Npcap se instaló con la opción *Restrict Npcap driver's access to Administrators only*, el medidor muestra el botón **Reabrir como administrador** (vale solo esa vez). Para no necesitarlo nunca, reinstala Npcap sin marcar esa opción.
+No por defecto: AionCore se instala solo para tu usuario y se abre sin pedir permisos de administrador. Tres casos lo cambian:
+
+- Si tu Npcap se instaló con la opción *Restrict Npcap driver's access to Administrators only*, el medidor muestra el botón **Reabrir como administrador** (vale solo esa vez). Para no necesitarlo nunca, reinstala Npcap sin marcar esa opción.
+- **En los menús del juego** (ocultar la barra y los overlays cuando se abre un menú del juego): para ver si Alt y Esc están pulsadas con el juego al frente, AionCore tiene que ejecutarse como administrador. Lee solo esas dos teclas, solo con Aion 2 al frente, y no se graba ni se envía nada. Sin permisos de administrador, se guía por el cursor del juego.
+- Si Aion 2 se ejecuta como administrador, el clic en un aviso fuera del juego solo trae el juego al frente si AionCore también se ejecuta como administrador.
+
+Para estos casos existe **Configuración › General › Abrir AionCore como administrador**, desactivado por defecto. Al activarlo, Windows pide el permiso (UAC).
 </details>
 
 <details>
@@ -150,7 +156,7 @@ Get-FileHash .\AionCore-Setup.exe
 <details>
 <summary><b>¿Qué sale de mi PC?</b></summary>
 
-Los combates solo salen de tu PC si activas el envío (opcional, desactivado por defecto). El medidor descarga los íconos de las habilidades desde la CDN del juego y consulta este repositorio para saber si hay versión nueva. La actualización automática nunca instala con Aion 2 abierto.
+Sin una cuenta conectada, ningún combate sale de tu PC. Con la cuenta conectada, van a aioncore.app los combates de jefe y las inspecciones, como dice el aviso antes de activarse; se desactiva en **Configuración › Cuenta y envío**. El medidor descarga los íconos de las habilidades desde la CDN del juego y consulta este repositorio para saber si hay versión nueva. La actualización no se instala por sí sola mientras Aion 2 está abierto.
 </details>
 
 <details>
@@ -167,7 +173,7 @@ No y no. AionCore es un proyecto independiente, hecho por un jugador, sin afilia
 
 ## Errores y contacto
 
-Abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues) o escribe a contato@aioncore.app. En la app: **Configuración › Ayuda y comunidad**.
+Abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues) o escribe a contato@aioncore.app. En la app: **Configuración › Ayuda y diagnóstico**.
 
 ## Créditos
 
