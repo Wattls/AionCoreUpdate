@@ -8,7 +8,7 @@
   <img alt="AionCore" src="media/aioncore-logo-light.svg" width="340">
 </picture>
 
-### Find Hidden Cubes, read your Party's DPS and never miss a call.<br>A free companion app for Aion 2 on Windows.
+### See your Party's DPS, find Hidden Cubes and control it all from a bar over the game.<br>A free companion app for Aion 2 on Windows.
 
 [![Version](https://img.shields.io/github/v/release/filvoch/AionCoreUpdate?label=version&color=1a9bbd)](https://github.com/filvoch/AionCoreUpdate/releases/latest)
 ![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
@@ -16,29 +16,29 @@
 
 <a href="https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe"><img alt="Download AionCore for Windows (AionCore-Setup.exe)" src="https://img.shields.io/badge/Download_for_Windows-AionCore--Setup.exe-1a9bbd?style=for-the-badge&logo=windows&logoColor=white"></a>
 
-<sub>About 160 MB installer · updates itself · [All versions](https://github.com/filvoch/AionCoreUpdate/releases) · [Website](https://aioncore.app/en/)</sub>
+<sub>About 160 MB installer · updates itself · Windows 10 or 11, 64-bit · [All versions](https://github.com/filvoch/AionCoreUpdate/releases) · [Website](https://aioncore.app/en) · [Discord](https://aioncore.app/discord)</sub>
 
-<img alt="Screenshot of the Cube radar, north up: you in the center with an arrow for where you are facing, three Hidden Cubes around you, the nearest one highlighted with a line, and the text &quot;Cube 38 m northeast&quot; and &quot;+2 more · ahead, to the right&quot; (simulated data)" src="media/shot-radar.jpg" width="820">
+<img alt="Screenshot of the Cube radar, north up: you in the center with an arrow for where you are facing, three Hidden Cubes around you, the nearest one highlighted with a line, and the text &quot;Cube 38 m northeast&quot; and &quot;+2 more · ahead, to the right&quot; (app in English, sample data)" src="media/shot-radar.jpg" width="820">
 
 </div>
 
 > [!NOTE]
-> The meter needs [Npcap](https://npcap.com), and Aion 2 must run in **Windowed** or **Borderless window** mode. See [Install in 3 steps](#install-in-3-steps).
+> The meter needs [Npcap](https://npcap.com) (the installer checks and tells you if it is missing), and Aion 2 must run in **Borderless window** or **Windowed** mode. See [Install in 3 steps](#install-in-3-steps).
 
-## Hidden Cube radar
+## Why download it
 
-A small window that opens by itself when the game reports a Hidden Cube near you, and hides again when none are left.
+- **See who carried the fight.** Damage, DPS and share for every player in your Party, skill by skill.
+- **Never lose a fight.** Every fight is saved in the history on your PC, so you can compare it with your next attempt.
+- **Find the Hidden Cube.** The radar opens by itself when the game shows a cube nearby and tells you where to go.
+- **Everything in one bar over the game.** One button per window, a lock that lets clicks through, and nothing in the way when you open the map or the inventory.
 
-- **Automatic.** On by default: it opens when an unopened Hidden Cube appears and hides about 3 seconds after the last one is gone. The ✕ dismisses only the current cubes; the next one opens the radar again.
-- **North up**, like the in-game minimap, with an arrow for where you are facing. Prefer it to rotate with you? Pick **Turns with you**.
-- **Several cubes at once.** The cube you are tracking gets the big dot and the line; the others are smaller, and the text shows "+N more".
-- **See the game through it.** Radar opacity goes from 30% to 100%.
-- **Alerts that tell you where to go:** at 80, 50, 25 and 10 m, where the cube is from you (ahead, behind, to your right...), and when another player has already opened it.
-- **Next spot.** After a cube is opened, the alert points to the nearest known spawn spot, like "~240 m northeast". The meter ships with 3,722 spots where cubes have spawned (direction and distance are still being checked in game).
+## What's new in 1.16
 
-Everything is in **Settings › Alerts and events**. The radar shows only cubes the game sends. The game reports your own position only when you use a skill or dash, so without a recent position the radar shows "Cube detected" and asks you to move.
+- **AionCore Theme**, the new meter look for supporters: a two-line header, a trend arrow on every player row, columns per role, copy the Party's DPS to the chat and a screenshot of the meter only, with one click.
+- **For everyone:** effect names (stun, burn, boss frenzy and more) show up in **Buffs** and in History; if you turn on a VPN or a ping reducer after opening AionCore, it finds the connection by itself within 15 seconds; and the ping is now color-coded.
+- **Fixed for everyone:** MP, DP and AP recovery no longer counts as HP healing, and healing, shields and damage taken that arrive after the fight ends no longer count.
 
-<p align="center"><img alt="Animated demo of the Cube radar: a Hidden Cube to the northeast, ahead of you, gets closer as you move toward it, from 85 m down to 18 m (simulated data)" src="media/demo.gif" width="720"></p>
+[Everything that changed](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [The new screens on the website](https://aioncore.app/en/novo)
 
 ## Party DPS meter
 
@@ -47,20 +47,98 @@ Everything is in **Settings › Alerts and events**. The radar shows only cubes 
 - **Boss timers:** Boss HP in numbers, **Kill in** (estimate from how fast the HP is dropping) and **Enrage in** for bosses with a known enrage timer.
 - **Every fight saved on your PC:** **History**, a summary of each fight, **Compare fights**, **Boss runs**, death recap, and export to JSON, CSV or PNG.
 - **Floating party:** your Party's health in a small window.
-- **Five free looks:** Stripes, Classic, Dense, Panel and Glass, plus the Glass finish over Dense, Panel and Stripes.
+- **Five free looks:** Stripes, Classic, Dense, Panel and Glass, plus the **Glass finish** over Dense, Panel and Stripes.
 
-<p align="center"><img alt="Screenshot of the AionCore Meter in the Stripes look during a boss fight: boss HP with Kill in and Enrage in at the top, then one row per player for six players with damage, DPS and share (simulated data, invented names)" src="media/shot-meter.jpg" width="400"></p>
+<p align="center"><img alt="Screenshot of the AionCore Meter in the Stripes look during a boss fight: boss HP with Kill in and Enrage in at the top, then one row per player for six players with damage, DPS and share (app in English, sample data, invented names)" src="media/shot-meter.jpg" width="400"></p>
 
-## Out-of-game alerts and Room panel
+## Hidden Cube radar
 
-Alt-tabbed out or game minimized? Party invites, Expedition invites, calls to join and join requests pop up over any window. Click one and AionCore brings the game to the front. It never clicks or accepts anything for you.
+A small window that opens by itself when the game reports a Hidden Cube near you, and hides again when none are left.
 
-The **Room panel** shows who is in the room, their Gear Score and Combat Power, and who is ready.
+- **Automatic:** it opens when an unopened cube appears and hides about 3 seconds after the last one is gone. Prefer to always see it? Turn on **Keep the radar always visible**.
+- **North up**, like the in-game minimap, or **Turns with you**.
+- **Several cubes:** the cube you are tracking gets the big dot and the line; the text shows "+N more".
+- **Alerts that tell you where to go:** within 80, 50, 25 and 10 m, whether the cube is to your right, ahead or behind, and when another player has already opened it.
+
+The radar shows only cubes the game sends. The game reports your own position only when you use a skill or dash, so without a recent position the radar shows "Cube detected" and asks you to move. Everything is in **Settings › Alerts and events**.
+
+<p align="center"><img alt="Animated demo of the Cube radar: a Hidden Cube to the northeast, ahead of you, gets closer as you move toward it, from 85 m down to 18 m (app in English, sample data)" src="media/demo.gif" width="720"></p>
+
+## Top bar and main window
+
+- **Top bar:** one button each for the meter, the floating party, the checklist, the timers, the pet radar, the mechanic alerts, the dungeon guide and YouTube. The padlock locks everything and clicks go straight through to the game. Opacity from 20% to 100% and a collapsed mode.
+- **Main window:** Home with the countdown to the daily and weekly reset, your characters, upcoming events and your last fight; Ctrl+K searches screens and commands. Open it from the bar, the Windows tray or with Ctrl+Alt+A.
+- **Out of the way:** the bar and the overlays hide when another program is in front and when a game menu opens (Esc, map, inventory). With **Open AionCore as administrator** on, AionCore checks only whether the Alt and Esc keys are pressed, only while the game is in front; no other key, and nothing is recorded or sent. Without administrator mode, it goes by the game's cursor. Turn it off in **Settings › In-game**.
+- **Ctrl+Alt shortcuts** that work over the game (M meter, G party, H collapse the bar, L lock, K click-through, D hide everything). If another program already uses one, AionCore offers to change it.
+- Threat, PvP target, Arena and Map appear dimmed on the bar: **coming soon**.
+
+<p align="center"><img alt="Screenshot of the AionCore bar: the name on the left, a row of icon buttons, the opacity control at 100%, the lock and the collapse, settings and close buttons (app in English)" src="media/shot-bar.jpg" width="880"></p>
+
+<p align="center"><img alt="Screenshot of the main window on Home: side menu with Home, Checklist, Meter, Dungeons, Schedule and Pets, the daily and weekly reset countdown, what not to miss, two characters, upcoming events and the last fight (app in English, sample data, invented names)" src="media/shot-home.jpg" width="820"></p>
+
+## Boss mechanics
+
+- **Mechanics panel:** what the boss does and what you should do, by dungeon. Free. Coverage grows with each version, and mechanics not yet checked in game are marked.
+- **On-screen mechanic alerts:** one to three words at the top of the screen before the hit. Supporters get them first; everyone gets them starting **November 10, 2026**.
+
+## In validation
+
+These already ship with the installer and passed the automated tests, but have not been checked live in game yet:
+
+- **Checklist:** daily and weekly tasks per character. Duty Missions, today's Kinah limit, this week's Abyss Points and Odyle energy are read from the game; you tick the rest.
+- **Schedule and Timers:** the week's events with a countdown, and field bosses read from the game when you open the world map.
+- **Pets:** your collection by family, the souls you still need and where to farm them. The **pet radar** lists nearby monsters that drop a soul you still need; it comes turned off.
 
 <table>
   <tr>
-    <td width="50%"><img alt="Screenshot of three stacked out-of-game alert cards: a Call to join, an Expedition invite and a Party invite, each with the player's class, level, Gear Score, Combat Power and server (simulated data, invented names)" src="media/shot-alerts.jpg"></td>
-    <td width="50%"><img alt="Screenshot of the Room panel: four members with Gear Score, Combat Power, level and ready status, one open slot and two join requests (simulated data, invented names)" src="media/shot-room.jpg"></td>
+    <td width="50%"><img alt="Screenshot of a character's Checklist: Odyle energy, gain limits, daily and weekly tasks, some read from the game and others ticked by hand (app in English, sample data, invented names)" src="media/shot-checklist.jpg"></td>
+    <td width="50%"><img alt="Screenshot of the Schedule: the week's events with times and a countdown, and the field bosses block waiting for the in-game map to be opened (app in English, sample data)" src="media/shot-agenda.jpg"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Checklist</sub></td>
+    <td align="center"><sub>Schedule</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img alt="Screenshot of the Pets tab: the collection by family, the farm map with spawn points for each family and the pets closest to their next level (app in English, sample data)" src="media/shot-pets.jpg"></td>
+    <td width="50%"><img alt="Screenshot of the pet radar: nearby monsters that drop a soul you still need, with approximate distance and a mini radar (app in English, sample data)" src="media/shot-petradar.jpg"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Pets</sub></td>
+    <td align="center"><sub>Pet radar</sub></td>
+  </tr>
+</table>
+
+Something looks wrong? Tell us on [Discord](https://aioncore.app/discord) or open an [issue](https://github.com/filvoch/AionCoreUpdate/issues).
+
+## Install in 3 steps
+
+Requirements: Windows 10 (1809 or newer) or 11, 64-bit.
+
+1. [Download the installer](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) and run it. It installs for your user only. If Windows says "Windows protected your PC", click **More info**, then **Run anyway** ([why](#faq)).
+2. Install [Npcap](https://npcap.com) once, with *Install Npcap in WinPcap API-compatible Mode* and *Support loopback traffic* checked. If it is missing, the AionCore installer tells you and opens the Npcap website at the end.
+3. Open AionCore from the shortcut. In Aion 2, use **Borderless window** or **Windowed**: Windows doesn't let anything show over exclusive full screen.
+
+The first time you open it, you pick your language and region and read the usage and data notice. Connecting your Discord account is optional. App and website in 6 languages: English, Portuguese, Spanish, German, French and Russian (German, French and Russian are reviewed machine translations, not yet checked by native speakers).
+
+AionCore updates itself: it verifies the installer's digital signature and does not install by itself while Aion 2 is open (if you click **Update** with the game open, it asks you first, and the meter loses the fight in progress). Your settings and fight history are kept between versions.
+
+## For supporters
+
+AionCore is free. If you want to help keep it running, you can chip in any amount on Ko-fi. A one-time payment of **US$ 15 or more, in US dollars** (the Ko-fi shop item or a one-time donation) makes you a **Supporter for 12 months**, **with no auto-renewal**. Smaller amounts are a thank-you with no perks. **Everything already released for free stays free forever.**
+
+What supporters get today:
+
+- **AionCore Theme:** the new meter look, with a two-line header, a trend arrow on every player row, up to 4 columns per role (Tank, DPS and Healer), **Only me** with your best skills, copy the Party's DPS to the chat (AionCore only copies; you paste it) and a screenshot of the meter only.
+- **Out-of-game alerts:** alt-tabbed out or game minimized? Party invites, Expedition invites, calls to join and join requests pop up over any window. Click one and AionCore brings the game to the front; it never clicks or accepts anything for you.
+- **Room panel:** who is in the room, their GS and Combat Power, and who is ready.
+- **Applicant card:** whoever asks to join your room shows up in a small window with class, level, GS and the fights you already had together, and you can look up their public profile summary on the website.
+- **Color themes** for the meter.
+- **Before everyone else:** boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
+
+<table>
+  <tr>
+    <td width="50%"><img alt="Screenshot of three stacked out-of-game alert cards: a Call to join, an Expedition invite and a Party invite, each with the player's class, level, GS, Combat Power and server (app in English, sample data, invented names)" src="media/shot-alerts.jpg"></td>
+    <td width="50%"><img alt="Screenshot of the Room panel: four members with GS, Combat Power, level and ready status, one open slot and two join requests (app in English, sample data, invented names)" src="media/shot-room.jpg"></td>
   </tr>
   <tr>
     <td align="center"><sub>Out-of-game alerts</sub></td>
@@ -68,49 +146,26 @@ The **Room panel** shows who is in the room, their Gear Score and Combat Power, 
   </tr>
 </table>
 
-<sub>Out-of-game alerts and the Room panel are supporter features. See [Free, with optional support](#free-with-optional-support).</sub>
+[Support AionCore](https://aioncore.app/en/apoie)
 
-## Boss mechanics
-
-- **Mechanics panel:** what the boss does and what you should do, by dungeon. Free. Coverage grows with each version, and mechanics not yet checked in game are marked.
-- **On-screen mechanic alerts:** a warning before the hit. Supporters first, everyone from **November 10, 2026**.
-
-## Main window, Schedule and shortcuts
-
-- **Main window:** Home, Checklist, Meter, Dungeons, Schedule and Pets in one window. Open it from the top bar, the Windows tray or Ctrl+Alt+A.
-- **Schedule (in validation):** the week's events with a countdown, and field boss times read from the game when you open the world map; the **Timers** window shows the countdown over the game. It passed the automated tests but has not been checked live in game yet.
-- **Global shortcuts** (Ctrl+Alt) that work over the game. Change them in **Settings › Overlays › Bar › Shortcuts for the bar and the overlays**.
-
-App and website available in 6 languages: EN, PT-BR, ES, DE, FR, RU (DE, FR and RU are machine-translated and still under review).
-
-## Install in 3 steps
-
-Requirements: Windows 10 (1809 or newer) or 11, 64-bit.
-
-1. [Download the installer](https://github.com/filvoch/AionCoreUpdate/releases/latest/download/AionCore-Setup.exe) and run it. If Windows says "Windows protected your PC", see [the FAQ](#faq).
-2. Install [Npcap](https://npcap.com) once, with *Install Npcap in WinPcap API-compatible Mode* and *Support loopback traffic* checked. The meter uses it to read the game's network traffic.
-3. Open AionCore from the shortcut. In Aion 2, use **Windowed** or **Borderless window**: overlays cannot show over exclusive full screen.
-
-AionCore updates itself. It checks this repository, verifies the installer's digital signature and does not install by itself while Aion 2 is open. If you click **Update** with the game open, it asks you before installing (the meter loses the fight in progress). Your settings and fight history are kept between versions.
-
-## Free, with optional support
-
-AionCore is free, with no paid advertising; there is a partner card (affiliate link), flagged on screen. You can help with any amount on Ko-fi. A one-time payment of **US$ 15 or more, in US dollars** (the Ko-fi shop item or a one-time donation) makes you a **Supporter for 12 months** (no auto-renewal). Smaller amounts are a thank-you with no perks. You get **1 year of the Supporter badge**, **updates first** and **some features exclusive to the people who help keep AionCore running**. **Everything already released for free stays free forever.**
-
-What supporters get today: out-of-game alerts, the Room panel, the party applicant card, meter color themes and early access to on-screen boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
-
-[Support AionCore](https://aioncore.app/en/apoie/)
+<sub>No paid advertising. On Home and in Settings › About there is a partner card (affiliate link), flagged on screen: AionCore may earn a commission at no extra cost to you.</sub>
 
 ## Your data
 
-Your fights stay on your PC. Without connecting an account, no fight leaves it. Connecting an account is optional; when you connect, a notice shows what goes to [aioncore.app](https://aioncore.app/en/) (ranking and fight pages) and uploading boss fights and inspections turns on. Turn it off in **Settings › Account and upload**. Details in the [privacy policy](https://aioncore.app/en/privacidade/).
+Your fights stay on your PC. Without connecting an account, no fight leaves it. Connecting an account (through Discord) is optional; when you connect, a notice shows what goes to [aioncore.app](https://aioncore.app/en) and uploading boss fights and inspections turns on. Turn it off with one click in **Settings › Account and upload**. Details in the [privacy policy](https://aioncore.app/en/privacidade).
 
 ## FAQ
 
 <details>
 <summary><b>Can I get banned?</b></summary>
 
-The meter reads your PC's network traffic and the game window title. It does not change game files or game memory. Even so, no tool of this kind can guarantee what the game's policy decides: use it at your own risk.
+AionCore reads your PC's network traffic and the game window title. It does not change game files or game memory. It sends no keys or clicks to the game: copying the DPS to the chat only copies it, and you paste it yourself. Even so, no tool of this kind can guarantee what the game's policy decides: use it at your own risk.
+</details>
+
+<details>
+<summary><b>Does AionCore read what I type?</b></summary>
+
+No. With **In the game menus** on and AionCore running as administrator, it checks only whether the Alt and Esc keys are pressed, and only while Aion 2 is in front, to know whether a game menu opened. No other key is read, and nothing is recorded or sent. Turn it off in **Settings › In-game**.
 </details>
 
 <details>
@@ -122,7 +177,7 @@ Built and tested on Aion 2 Global (South America servers). Other regions (Taiwan
 <details>
 <summary><b>Is the meter accurate?</b></summary>
 
-It counts what the game sends. In some cases the meter cannot see everything, and it tells you when it is not reading the game. The website explains how it measures: [accuracy](https://aioncore.app/en/precisao/).
+It counts what the game sends. In some cases the meter cannot see everything, and it tells you when it is not reading the game. The website explains how it measures: [accuracy](https://aioncore.app/en/precisao).
 </details>
 
 <details>
@@ -130,15 +185,15 @@ It counts what the game sends. In some cases the meter cannot see everything, an
 
 Not by default: AionCore installs for your user only and opens without asking for administrator rights. Three cases change that:
 
-- If your Npcap was installed with *Restrict Npcap driver's access to Administrators only*, the meter shows a **Reopen as administrator** button (just for that time). To never need it, reinstall Npcap without that option.
-- **In the game menus** (hide the bar and the overlays when a game menu opens): to see whether Alt and Esc are pressed while the game is in front, AionCore must run as administrator. It reads only those two keys, only with Aion 2 in front, and nothing is recorded or sent. Without administrator rights, it goes by the game's cursor.
+- If your Npcap was installed with *Restrict Npcap driver's access to Administrators only*, the meter shows a **Reopen as administrator** button (that time only). To never need it, reinstall Npcap without that option.
+- **In the game menus** (hide the bar and the overlays when a game menu opens): to see whether Alt and Esc are pressed while the game is in front, AionCore must run as administrator. Without that, it goes by the game's cursor.
 - If Aion 2 runs as administrator, clicking an out-of-game alert brings the game to the front only when AionCore runs as administrator too.
 
 For these cases there is **Settings › General › Open AionCore as administrator**, off by default. When you turn it on, Windows asks for permission (UAC).
 </details>
 
 <details>
-<summary><b>The meter disappears when the game is in front.</b></summary>
+<summary><b>The bar or the meter disappears when the game is in front.</b></summary>
 
 The game is in exclusive **Full screen**, and Windows shows no window on top of it. In Aion 2's video options, switch to **Borderless window**.
 </details>
@@ -146,7 +201,7 @@ The game is in exclusive **Full screen**, and Windows shows no window on top of 
 <details>
 <summary><b>Windows or my antivirus warned me during install.</b></summary>
 
-The installer has no paid code-signing certificate, so Windows does not know the publisher and shows "Windows protected your PC". Click **More info**, then **Run anyway**. An antivirus may ask for confirmation for the same reason. To check that the file is the original, compare the SHA-256 in `latest.json` (in the release Assets) with the output of:
+The installer has no paid code-signing certificate, so Windows does not know the publisher and shows "Windows protected your PC". Click **More info**, then **Run anyway**. An antivirus may ask for confirmation for the same reason. To check that the file is the original, compare the `sha256` value in `latest.json` (in the Assets of the [latest release](https://github.com/filvoch/AionCoreUpdate/releases/latest)) with the output of:
 
 ```powershell
 Get-FileHash .\AionCore-Setup.exe
@@ -156,7 +211,7 @@ Get-FileHash .\AionCore-Setup.exe
 <details>
 <summary><b>What leaves my PC?</b></summary>
 
-Without a connected account, no fight leaves your PC. With an account connected, boss fights and inspections go to aioncore.app, as the notice says before it turns on; turn it off in **Settings › Account and upload**. The meter downloads skill icons from the game's CDN and checks this repository for new versions. Updates do not install by themselves while Aion 2 is open.
+Without a connected account, no fight leaves your PC. AionCore downloads skill icons from the game's CDN and checks this repository for new versions. With an account connected, boss fights and inspections go to aioncore.app, as the notice says before it turns on; turn it off in **Settings › Account and upload**. The profile lookup on the applicant card sends only name and server (turn it off in **Settings › Alerts and events › Party invite**).
 </details>
 
 <details>
@@ -168,12 +223,14 @@ Without a connected account, no fight leaves your PC. With an account connected,
 <details>
 <summary><b>Is it official? Is the code open?</b></summary>
 
-No to both. AionCore is an independent project made by a player, not affiliated with or endorsed by NCSOFT. The source code is not public: this repository holds only the published installers and this page.
+No to both. AionCore is an independent project made by a player, not affiliated with NCSOFT. The source code is not public: this repository holds only the published installers and this page.
 </details>
 
-## Bugs and contact
+## Community and contact
 
-Open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app. In the app: **Settings › Help and diagnostics**.
+- **Discord:** [aioncore.app/discord](https://aioncore.app/discord)
+- **Bugs:** open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app.
+- **In the app:** **Settings › Help and diagnostics**.
 
 ## Credits
 
