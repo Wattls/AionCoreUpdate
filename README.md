@@ -38,7 +38,7 @@
 - **For everyone:** effect names (stun, burn, boss frenzy and more) show up in **Buffs** and in History; if you turn on a VPN or a ping reducer after opening AionCore, it finds the connection by itself within 15 seconds; and the ping is now color-coded.
 - **Fixed for everyone:** MP, DP and AP recovery no longer counts as HP healing, and healing, shields and damage taken that arrive after the fight ends no longer count.
 
-[Everything that changed](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [The new screens on the website](https://aioncore.app/en/novo)
+[Everything that changed](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [The new screens on the website](https://aioncore.app/en/features)
 
 ## Party DPS meter
 
@@ -146,13 +146,13 @@ What supporters get today:
   </tr>
 </table>
 
-[Support AionCore](https://aioncore.app/en/apoie)
+[Support AionCore](https://aioncore.app/en/support)
 
 <sub>No paid advertising. On Home and in Settings › About there is a partner card (affiliate link), flagged on screen: AionCore may earn a commission at no extra cost to you.</sub>
 
 ## Your data
 
-Your fights stay on your PC. Without connecting an account, no fight leaves it. Connecting an account (through Discord) is optional; when you connect, a notice shows what goes to [aioncore.app](https://aioncore.app/en) and uploading boss fights and inspections turns on. Turn it off with one click in **Settings › Account and upload**. Details in the [privacy policy](https://aioncore.app/en/privacidade).
+Your fights stay on your PC. Without connecting an account, no fight leaves it. Connecting an account (through Discord) is optional; when you connect, a notice shows what goes to [aioncore.app](https://aioncore.app/en) and uploading boss fights and inspections turns on. Turn it off with one click in **Settings › Account and upload**. Details in the [privacy policy](https://aioncore.app/en/privacy).
 
 ## FAQ
 
@@ -177,7 +177,7 @@ Built and tested on Aion 2 Global (South America servers). Other regions (Taiwan
 <details>
 <summary><b>Is the meter accurate?</b></summary>
 
-It counts what the game sends. In some cases the meter cannot see everything, and it tells you when it is not reading the game. The website explains how it measures: [accuracy](https://aioncore.app/en/precisao).
+It counts what the game sends. In some cases the meter cannot see everything, and it tells you when it is not reading the game. The website explains how it measures: [accuracy](https://aioncore.app/en/accuracy).
 </details>
 
 <details>
