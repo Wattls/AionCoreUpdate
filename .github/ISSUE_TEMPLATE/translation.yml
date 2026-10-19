@@ -59,3 +59,10 @@ body:
         - "No"
     validations:
       required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        - label: I have read and agree to the contribution terms in CONTRIBUTING.md.
+          required: true

@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { argumentNames, validateCatalog, linksOf } from './validate-i18n.mjs';
+import { argumentNames, validateCatalog, linksOf, duplicateKeys } from './validate-i18n.mjs';
 
 // Real keys copied from the pt-BR catalog: plural, select, '#', nested arguments, a tag and a link.
 const sample = JSON.parse(readFileSync(new URL('./fixtures/pt-BR.sample.json', import.meta.url), 'utf8'));
@@ -80,9 +80,43 @@ test('.short texts: over the limit fails, within the limit passes', () => {
   assert.ok(errs.some((e) => e.includes('too long for a .short text')));
 });
 
-test('argument exceptions: a listed key may use other arguments, others may not', () => {
+test('argument exceptions: a listed key may leave out arguments, but never add new ones', () => {
   const s = { '@meta': {}, 'a.t': '{n, plural, one {# hit} other {# hits}}' };
-  const t = { '@meta': {}, 'a.t': 'hits: {nText}' };
-  assert.ok(validateCatalog(s, t).some((e) => e.includes('argument')));
-  assert.deepEqual(validateCatalog(s, t, { argExceptions: new Set(['a.t']) }), []);
+  const less = { '@meta': {}, 'a.t': 'hits' };
+  const more = { '@meta': {}, 'a.t': 'hits: {nText}' };
+  assert.ok(validateCatalog(s, less).some((e) => e.includes('missing')));
+  assert.deepEqual(validateCatalog(s, less, { argExceptions: new Set(['a.t']) }), []);
+  assert.ok(validateCatalog(s, more, { argExceptions: new Set(['a.t']) }).some((e) => e.includes('unknown argument')));
+});
+
+test('links: a lookalike domain, a new TLD and a swapped e-mail are rejected; versions and ordinals are not links', () => {
+  const s = { '@meta': {}, 'a.l': 'Visit aioncore.app or write to contato@aioncore.app. Version 1.20.1, 1.er lugar.' };
+  const good = { '@meta': {}, 'a.l': 'Visita aioncore.app o escribe a contato@aioncore.app. Versión 1.20.1, 1.er lugar.' };
+  assert.deepEqual(validateCatalog(s, good), []);
+  for (const bad of ['Visit aioncore.app.evil.ru', 'Visit aioncore.xyz or contato@aioncore.app', 'Visit aioncore.app or write to pix@aioncore.app', 'Visit evil.ru/aion or contato@aioncore.app']) {
+    assert.ok(validateCatalog(s, { '@meta': {}, 'a.l': bad }).some((e) => e.includes('links differ')), bad);
+  }
+});
+
+test('invisible characters beyond the old list: Unicode tags, line separator, fillers, variation selector, U+FFFD', () => {
+  const s = { '@meta': {}, 'a.i': 'Plain' };
+  for (const c of ['\u{E0049}', '\u2028', '\u3164', '\u2800', '\u034F', '\uFE0E', '\uFFFD']) {
+    assert.ok(validateCatalog(s, { '@meta': {}, 'a.i': 'Pla' + c + 'in' }).some((e) => e.includes('invisible') || e.includes('dangerous')), c);
+  }
+});
+
+test('ICU: nesting deeper than the app allows, duplicate branches and huge exact numbers are rejected', () => {
+  const deep = '{a, select, x {{b, select, x {{c, select, x {{d, select, x {{e, select, x {{f, select, x {y} other {y}}} other {y}}} other {y}}} other {y}}} other {y}}} other {y}}';
+  assert.throws(() => argumentNames(deep), /nested too deep/);
+  assert.throws(() => argumentNames('{n, plural, one {a} one {b} other {c}}'), /Duplicate branch/);
+  assert.throws(() => argumentNames('{n, plural, =0000000000000000007 {a} other {c}}'), /number/);
+});
+
+test('tags keep their case: <B> is not <b>', () => {
+  const s = { '@meta': {}, 'a.t': 'Click <b>here</b>' };
+  assert.ok(validateCatalog(s, { '@meta': {}, 'a.t': 'Click <B>here</B>' }).some((e) => e.includes('tags differ')));
+});
+
+test('duplicate keys in the file are found', () => {
+  assert.deepEqual(duplicateKeys('{\n  "@meta": {},\n  "a": "1",\n  "b": "2",\n  "a": "3"\n}\n'), ['a']);
 });

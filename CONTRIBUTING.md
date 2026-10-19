@@ -1,6 +1,6 @@
 # Contributing to AionCore
 
-Thank you for wanting to help. AionCore is an independent, free companion app for Aion 2 made by one player. This repository holds the published installers, the README and (soon) the translation files. **The source code of the app is private and stays private**, so code pull requests are not accepted.
+Thank you for wanting to help. AionCore is an independent, free companion app for Aion 2 made by one player. This repository holds the published installers, the README and the translation files (the app's texts, in the [`i18n/`](i18n/README.md) folder). **The source code of the app is private and stays private**, so code pull requests are not accepted.
 
 You can help in three ways:
 
@@ -34,21 +34,21 @@ AionCore ships in English, Portuguese (Brazil), Spanish, German, French and Russ
 Rules for translations:
 
 - The source of truth is `pt-BR.json`. Keep **the same keys in the same order**.
-- Do not change `{placeholders}`, `<tags>`, `#` inside plural branches, hotkeys, URLs, file names or product names (`AionCore`, `Npcap`, `Discord`, …). Plural and `select` structure must stay intact. A validator runs on every pull request that changes `i18n/` and rejects broken placeholders, tags, plural and `select` syntax, and links.
+- Do not change `{placeholders}`, `<tags>`, `#` inside plural branches, hotkeys, URLs, file names or product names (`AionCore`, `Npcap`, `Discord`, …). Plural and `select` structure must stay intact. A quick automatic check runs on every pull request and flags broken placeholders, tags, plural and `select` syntax, and changed links, domains or e-mail addresses. It is only a first filter: we run a stricter check ourselves and review the meaning before anything ships. A pull request may only add or change `i18n/<language>.json`; anything else, and any change to `pt-BR.json`, is rejected.
 - Follow the glossary: game terms should match the official Aion 2 client in your language.
 - **Machine translation is accepted if you say so** in the pull request. A review by a native speaker is worth much more, so tell us if you are one.
-- The **consent, legal and privacy texts** (`consent.*`, `legal.*`, `site.*_consent.*`, `site.telemetry.*`, `site.never_sent.*`, `site.field.*`, `firstrun.*`) can be proposed, but they stay labeled as machine translation and out of a published language until we have them reviewed.
+- The **consent, legal and privacy texts** (`consent.*`, `legal.*`, `site.*_consent.*`, `site.telemetry.*`, `site.never_sent.*`, `site.field.*`, `firstrun.*`) can be proposed, but we do not import them until we have reviewed them ourselves; the same goes for `support.*` (prices) and `cfg.about.partner.*` (the affiliate notice). Until then, the app keeps its current text.
 - A new language starts as a **draft**: it is not in the language picker or the installer until the review gates pass and the layout for that script is tested.
 - Nothing from a pull request ships automatically. We import it, run our own checks, review the meaning and only then put it in a release.
 
 ## Recognition
 
-- **Credit (optional):** if you want, your GitHub name, or another name you choose, goes in the contributors list of the README and, later, in the app's About screen. You can also stay anonymous, and you can ask us to change or remove your name at any time. On the Discord server you can get the *Translator* or *Contributor* role.
+- **Credit (optional):** if you want, your GitHub name, or another name you choose, goes in a *Contributors* section of the README (we create it with the first credit) and, in the future, in the app's About screen. You can stay anonymous, and you can ask us to change or remove your name. GitHub keeps its own history of issues and pull requests, which we cannot erase. On the Discord server you can get the *Translator* or *Contributor* role.
 - **Supporter status as a thank-you:** for substantial work, the maintainer may choose to give you 12 months of Supporter status. Examples: a complete new language with a native review, keeping a language up to date across releases (it may be given again in later years), or a bug report that leads to an important fix.
 - This is a voluntary gift, decided case by case by the maintainer. It is **not payment and not a right**: matching an example above does not mean you will get it, and no money is involved. Small fixes get credit only, and bulk machine translation sent just to get the status does not count.
 - Supporter status is personal. If your code is posted in public, it stops working and we send you a new one. What supporters get is described on the [support page](https://aioncore.app/en/support).
 
-## Contribution terms
+## Contribution terms (version 2026-10-19)
 
 When you send a contribution (a translation, a text, a report or an idea), you confirm that you wrote it or have the right to share it, and that you are 18 or older or have a parent's or guardian's permission. You also agree that:
 

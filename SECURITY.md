@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Please report security problems **in private** by writing to **contato@aioncore.app**. Do not open a public issue, pull request or Discord post about a vulnerability.
+Please report security problems **in private**: use the **Report a vulnerability** button on the *Security* tab of this repository, or write to **contato@aioncore.app**. Do not open a public issue, pull request or Discord post about a vulnerability.
 
 Useful details: the AionCore version (Settings > About), what you found, the steps to reproduce it and what you think the impact is. Please do not include character names or other personal data.
 

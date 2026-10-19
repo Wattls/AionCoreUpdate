@@ -32,7 +32,7 @@
 - **Ache o Cubo Oculto.** O radar abre sozinho quando o jogo mostra um cubo perto e diz para onde ir.
 - **Tudo numa barra sobre o jogo.** Um botão para cada janela, um cadeado que deixa o clique passar e nada na frente quando você abre o mapa ou o inventário.
 
-## Novidades da 1.20
+## Novidades da 1.17 à 1.20
 
 - **Mapa do jogo no app:** nova aba **Mapa**, grátis, com coleta, monstros, teleportes, entradas de masmorra, cubos e chefes de campo. Ao vivo, mostra a sua posição e pode avisar quando um chefe de campo renasce.
 - **Entrar com o Discord pelo navegador:** o botão abre o navegador e devolve você ao AionCore já conectado, sem digitar código.
@@ -50,6 +50,7 @@
 - **Suas lutas guardadas no seu PC:** **Histórico**, resumo de cada luta, **Comparar lutas**, **Corridas de chefes**, recapitulação da morte e exportar em JSON, CSV ou PNG.
 - **Grupo flutuante:** a vida do seu grupo numa janela pequena.
 - **Cinco visuais grátis:** Faixas, Clássico, Denso, Painel e Vidro, e o **acabamento Vidro** sobre Denso, Painel e Faixas.
+- **Barra de baixo, grátis em todos os visuais:** copiar o DPS do grupo para o chat (o AionCore só copia; quem cola é você) e print só do medidor.
 
 <p align="center"><img alt="Captura de tela do AionCore Meter no visual Faixas numa luta de chefe: no alto o HP do chefe com Derrota em e Fúria em, e embaixo uma linha por jogador, seis jogadores, com dano, DPS e parte (app em inglês, dados de exemplo, nomes inventados)" src="media/shot-meter.jpg" width="400"></p>
 
@@ -131,14 +132,14 @@ O AionCore é grátis. Quem quiser ajudar a mantê-lo pode apoiar no Ko-fi com q
 
 O que o apoiador tem hoje:
 
-- **AionCore Theme:** o visual novo do medidor, com topo em duas linhas, seta de tendência por jogador, até 4 colunas por função (Tanque, DPS e Curandeiro), **Só eu** com as suas melhores habilidades, copiar o DPS do grupo para o chat (o AionCore só copia; quem cola é você) e print só do medidor.
-- **Avisos fora do jogo:** deu alt-tab ou minimizou? Convites de grupo e de Expedição, chamados para entrar e pedidos de entrada aparecem por cima de qualquer janela. Clique e o AionCore traz o jogo para a frente; ele nunca clica nem aceita nada por você.
-- **Painel da sala:** quem está na sala, GS, poder de combate e quem está pronto.
+- **AionCore Theme:** o visual novo do medidor, com topo em duas linhas, seta de tendência por jogador, até 4 colunas por função (Tanque, DPS e Curandeiro) e **Só eu** com as suas melhores habilidades.
+- **Avisos fora do jogo:** deu alt-tab ou minimizou? Convites de grupo e de Expedição, chamados para entrar e pedidos de entrada aparecem por cima de qualquer janela. Clique e o AionCore traz o jogo para a frente; ele nunca clica nem aceita nada por você. Grátis para todos a partir de 11/01/2027.
+- **Painel da sala:** quem está na sala, GS, poder de combate e quem está pronto. Grátis para todos a partir de 11/02/2027.
 - **Cartão do candidato:** quem pede para entrar na sua sala aparece numa janelinha com classe, nível, GS e o que você já jogou com a pessoa, e você pode consultar o resumo do perfil público dela no site.
 - **Temas de cor** do medidor.
 - **Análise de habilidades:** uma aba nos detalhes de cada jogador, ao vivo e no Histórico, com usos estimados, dano por uso, DPS ativo, picos e linha do tempo de cada habilidade.
 - **Selo de apoiador:** um selo na sua linha do medidor com gema, estilo e movimento, e uma barra de éter na cor da sua barra. Só você vê no seu medidor.
-- **Relatório da Arena:** no Resumo de uma luta de Arena, um cartão com resultado, pontuação, duração, abates e mortes (o que o jogo ainda não informou fica em branco).
+- **Relatório da Arena:** no Resumo de uma luta de Arena, um cartão com resultado, pontuação, duração, abates e mortes (o que o jogo ainda não informou fica em branco; hoje só a vitória é reconhecida).
 - **Antes de todo mundo:** avisos de mecânica de chefe (até 10/11/2026) e avisos da barra de guarda do chefe (até 11/11/2026).
 
 <table>
@@ -229,7 +230,7 @@ Sem conta conectada, nenhuma luta sai. O AionCore baixa os ícones das habilidad
 <details>
 <summary><b>É oficial? O código é aberto?</b></summary>
 
-Não e não. O AionCore é um projeto independente, feito por um jogador, sem vínculo com a NCSOFT. O código-fonte não é público: este repositório guarda só os instaladores publicados e esta página.
+Não e não. O AionCore é um projeto independente, feito por um jogador, sem vínculo com a NCSOFT. O código-fonte não é público: este repositório guarda os instaladores publicados, esta página e os arquivos de tradução, abertos a contribuições.
 </details>
 
 ## Contribuir

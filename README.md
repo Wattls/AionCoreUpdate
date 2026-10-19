@@ -32,7 +32,7 @@
 - **Find the Hidden Cube.** The radar opens by itself when the game shows a cube nearby and tells you where to go.
 - **Everything in one bar over the game.** One button per window, a lock that lets clicks through, and nothing in the way when you open the map or the inventory.
 
-## What's new in 1.20
+## What's new from 1.17 to 1.20
 
 - **Game map in the app:** a new, free **Map** tab with gathering, monsters, teleports, dungeon entrances, cubes and field bosses. Live, it shows your position and can notify you when a field boss respawns.
 - **Connect with Discord from your browser:** the button opens the browser and brings you back to AionCore connected, with no code to type.
@@ -50,6 +50,7 @@
 - **Every fight saved on your PC:** **History**, a summary of each fight, **Compare fights**, **Boss runs**, death recap, and export to JSON, CSV or PNG.
 - **Floating party:** your Party's health in a small window.
 - **Five free looks:** Stripes, Classic, Dense, Panel and Glass, plus the **Glass finish** over Dense, Panel and Stripes.
+- **Bottom bar, free in every look:** copy the Party's DPS to the chat (AionCore only copies; you paste it) and a screenshot of the meter only.
 
 <p align="center"><img alt="Screenshot of the AionCore Meter in the Stripes look during a boss fight: boss HP with Kill in and Enrage in at the top, then one row per player for six players with damage, DPS and share (app in English, sample data, invented names)" src="media/shot-meter.jpg" width="400"></p>
 
@@ -131,14 +132,14 @@ AionCore is free. If you want to help keep it running, you can chip in any amoun
 
 What supporters get today:
 
-- **AionCore Theme:** the new meter look, with a two-line header, a trend arrow on every player row, up to 4 columns per role (Tank, DPS and Healer), **Only me** with your best skills, copy the Party's DPS to the chat (AionCore only copies; you paste it) and a screenshot of the meter only.
-- **Out-of-game alerts:** alt-tabbed out or game minimized? Party invites, Expedition invites, calls to join and join requests pop up over any window. Click one and AionCore brings the game to the front; it never clicks or accepts anything for you.
-- **Room panel:** who is in the room, their GS and Combat Power, and who is ready.
+- **AionCore Theme:** the new meter look, with a two-line header, a trend arrow on every player row, up to 4 columns per role (Tank, DPS and Healer) and **Only me** with your best skills.
+- **Out-of-game alerts:** alt-tabbed out or game minimized? Party invites, Expedition invites, calls to join and join requests pop up over any window. Click one and AionCore brings the game to the front; it never clicks or accepts anything for you. Free for everyone from January 11, 2027.
+- **Room panel:** who is in the room, their GS and Combat Power, and who is ready. Free for everyone from February 11, 2027.
 - **Applicant card:** whoever asks to join your room shows up in a small window with class, level, GS and the fights you already had together, and you can look up their public profile summary on the website.
 - **Color themes** for the meter.
 - **Skill analysis:** a tab in each player's details, live and in History, with estimated uses, damage per use, active DPS, peaks and a timeline for every skill.
 - **Supporter badge:** a badge on your own meter row with a gem, a style and a motion, plus an Aether bar in the color of your bar. Only you see it on your meter.
-- **Arena report:** in the Summary of an Arena fight, a card with result, score, duration, kills and deaths (anything the game has not reported yet stays blank).
+- **Arena report:** in the Summary of an Arena fight, a card with result, score, duration, kills and deaths (anything the game has not reported yet stays blank; today only a win is recognized).
 - **Before everyone else:** boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
 
 <table>
@@ -229,7 +230,7 @@ Without a connected account, no fight leaves your PC. AionCore downloads skill i
 <details>
 <summary><b>Is it official? Is the code open?</b></summary>
 
-No to both. AionCore is an independent project made by a player, not affiliated with NCSOFT. The source code is not public: this repository holds only the published installers and this page.
+No to both. AionCore is an independent project made by a player, not affiliated with NCSOFT. The source code is not public: this repository holds the published installers, this page and the translation files, which are open to contributions.
 </details>
 
 ## Contribute

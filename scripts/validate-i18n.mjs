@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-// Validates AionCore translation catalogs. Node 20+, no dependencies.
+// Quick, indicative check of AionCore translation catalogs. Node 20+, no dependencies.
+// It catches the common mistakes early. It is NOT the final gate: the maintainer imports every
+// contribution through a stricter private pipeline and reviews the meaning before anything ships.
 //
 //   node scripts/validate-i18n.mjs                      # i18n/pt-BR.json vs every other i18n/*.json
 //   node scripts/validate-i18n.mjs i18n/es.json ...     # only these catalogs
@@ -7,8 +9,10 @@
 //
 // The source catalog is pt-BR. For every translated catalog it checks: valid JSON, @meta present,
 // same keys in the same order, same {arguments}, same <tags>, same links and domains, no empty
-// value, no new invisible or bidi characters, no dangerous HTML, and `.short` texts within their
-// length limit. i18n/exceptions.json ({ "<lang>": ["key", ...] }) lists keys whose arguments may differ.
+// value, no new invisible or bidi characters, no dangerous HTML, no duplicate JSON keys, `@meta.lang`
+// equal to the file name, and `.short` texts within their length limit. Links are checked by comparing the
+// links, domains and e-mail addresses of each text with the source (any `name.tld`, not a fixed TLD list).
+// i18n/exceptions.json ({ "<lang>": ["key", ...] }) lists keys that may leave out some source {arguments}.
 // Exit code 1 on any error.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -16,7 +20,7 @@ import { basename, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const PLURAL_KEYWORDS = new Set(['zero', 'one', 'two', 'few', 'many', 'other']);
-const MAX_DEPTH = 6;
+const MAX_DEPTH = 5; // same limit as the app's own parser
 
 // ---------- {arguments} ----------
 
@@ -73,13 +77,16 @@ export function argumentNames(s) {
     pos++;
     const plural = kind !== 'select';
     let hasOther = false;
+    const seen = new Set();
     for (;;) {
       spaces();
       if (pos >= s.length) fail("Unclosed '{'");
       if (s[pos] === '}') { pos++; break; }
       let key;
-      if (plural && s[pos] === '=') { pos++; key = '=' + word(); if (!/^=\d+$/.test(key)) fail("Expected a number after '='"); }
+      if (plural && s[pos] === '=') { pos++; key = '=' + word(); if (!/^=\d{1,6}$/.test(key)) fail("Expected a number after '=' (up to 6 digits)"); }
       else { key = word(); if (!key) fail('Expected a branch keyword'); if (plural && !PLURAL_KEYWORDS.has(key)) fail(`'${key}' is not a plural category`); }
+      if (seen.has(key)) fail(`Duplicate branch '${key}'`);
+      seen.add(key);
       if (key === 'other') hasOther = true;
       spaces();
       if (s[pos] !== '{') fail("Expected '{' after branch keyword");
@@ -98,27 +105,32 @@ export function argumentNames(s) {
 // ---------- <tags> ----------
 
 export function tagsOf(s) {
-  return [...s.matchAll(/<\/?[A-Za-z][^<>]*>/g)].map((m) => m[0].replace(/\s+/g, ' ').toLowerCase()).sort();
+  return [...s.matchAll(/<\/?[A-Za-z][^<>]*>/g)].map((m) => m[0].replace(/\s+/g, ' ')).sort();
 }
 
 // ---------- links and domains ----------
 
 const TRAILING = /[.,;:!?)\]}'"]+$/; // ASCII punctuation stuck to a link
 const URL_RE = /(?:https?:\/\/|www\.)[A-Za-z0-9\-._~:/?#[\]@!$&'()*+,;=%]+/gi; // ASCII only: stops at CJK text and punctuation
-const DOMAIN_RE = /\b(?:[a-z0-9-]+\.)+(?:app|com|org|net|io|gg|dev|me|tv|gl|ly)\b(?:\/[A-Za-z0-9\-._~:/?#@%&=+]*)?/gi;
+const EMAIL_RE = /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g;
+// any name.tld; the first label needs a letter and a TLD has only letters, so 1.20.1 and ordinals like 1.er do not match
+const DOMAIN_RE = /\b(?=[a-z0-9-]*[a-z])(?:[a-z0-9-]+\.)+[a-z]{2,}\b(?:\/[A-Za-z0-9\-._~:/?#@%&=+]*)?/gi;
 
 export function linksOf(s) {
   const out = new Set();
   const norm = (u) => u.replace(TRAILING, '').replace(/\/+$/, '').toLowerCase();
   const rest = s.replace(URL_RE, (m) => { const n = norm(m); if (n) out.add(n); return ' '; });
-  for (const m of rest.matchAll(DOMAIN_RE)) { const n = norm(m[0]); if (n) out.add(n); }
+  const noMail = rest.replace(EMAIL_RE, (m) => { out.add(m.toLowerCase()); return ' '; });
+  for (const m of noMail.matchAll(DOMAIN_RE)) { const n = norm(m[0]); if (n) out.add(n); }
   return out;
 }
 
 // ---------- invisible / bidi ----------
 
-// zero-width, bidi controls, soft hyphen, BOM, word joiner, Mongolian vowel separator, C0/C1 controls (except \t \n \r)
-const INVISIBLE = /[­؜᠎​-‏‪-‮⁠-⁤⁦-⁩﻿\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/g;
+// format characters (zero-width, bidi, tags U+E0000.., soft hyphen, BOM...), private use, unassigned, line and
+// paragraph separators, invisible fillers (U+3164, U+FFA0, U+115F, U+1160, U+2800, U+034F), variation selectors,
+// U+FFFD and C0/C1 controls (except tab, LF, CR). A text may only have as many of each as the source has.
+const INVISIBLE = /[\p{Cf}\p{Co}\p{Cn}\u2028\u2029\u3164\uFFA0\u115F\u1160\u2800\u034F\uFE00-\uFE0E\uFFFD\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/gu;
 
 function invisibleCounts(s) {
   const m = new Map();
@@ -143,7 +155,7 @@ const DANGEROUS = [
 // ---------- validation ----------
 
 /** Compares one catalog (object) against the source. Returns a list of error strings. */
-/** `opts.argExceptions`: keys whose {argument} set may differ (documented in i18n/exceptions.json). */
+/** `opts.argExceptions`: keys that may leave out some source {arguments} (i18n/exceptions.json). Extra or unknown arguments are never allowed. */
 export function validateCatalog(source, target, opts = {}) {
   const errors = [];
   const argOk = opts.argExceptions ?? new Set();
@@ -177,10 +189,10 @@ export function validateCatalog(source, target, opts = {}) {
     try { sa = argumentNames(src); } catch { /* source problem: skip the argument check for this key */ }
     try {
       const ta = argumentNames(val);
-      if (sa && !argOk.has(k)) {
+      if (sa) {
         const lost = [...sa].filter((n) => !ta.has(n));
         const added = [...ta].filter((n) => !sa.has(n));
-        if (lost.length) errors.push(`${k}: argument(s) missing: ${lost.map((n) => '{' + n + '}').join(' ')}`);
+        if (lost.length && !argOk.has(k)) errors.push(`${k}: argument(s) missing: ${lost.map((n) => '{' + n + '}').join(' ')}`);
         if (added.length) errors.push(`${k}: unknown argument(s): ${added.map((n) => '{' + n + '}').join(' ')}`);
       }
     } catch (e) {
@@ -231,7 +243,19 @@ function readJson(path) {
   let text;
   try { text = readFileSync(path, 'utf8'); } catch (e) { return { error: `cannot read file: ${e.message}` }; }
   if (text.charCodeAt(0) === 0xfeff) text = text.slice(1);
-  try { return { json: JSON.parse(text) }; } catch (e) { return { error: `invalid JSON: ${e.message}` }; }
+  try { return { json: JSON.parse(text), text }; } catch (e) { return { error: `invalid JSON: ${e.message}` }; }
+}
+
+/** Names that appear more than once at the top level of a flat catalog (JSON.parse silently keeps the last one). */
+export function duplicateKeys(text) {
+  const seen = new Set();
+  const dup = new Set();
+  for (const m of text.matchAll(/^ {2}"((?:[^"\\]|\\.)*)"\s*:/gm)) {
+    const k = JSON.parse('"' + m[1] + '"');
+    if (seen.has(k)) dup.add(k);
+    seen.add(k);
+  }
+  return [...dup];
 }
 
 export function main(argv) {
@@ -265,6 +289,11 @@ export function main(argv) {
     const t = readJson(f);
     const lang = basename(f, '.json');
     const errors = t.error ? [t.error] : validateCatalog(src.json, t.json, { argExceptions: new Set(exceptions[lang] ?? []) });
+    if (!t.error) {
+      for (const k of duplicateKeys(t.text)) errors.push(`${k}: key appears more than once in the file`);
+      const declared = t.json['@meta']?.lang;
+      if (declared !== lang) errors.push(`@meta.lang is "${declared}" but the file is ${lang}.json`);
+    }
     if (!errors.length) { console.log(`ok   ${basename(f)}`); continue; }
     failed++;
     console.error(`FAIL ${f}: ${errors.length} problem(s)`);

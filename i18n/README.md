@@ -14,7 +14,7 @@ Thank you for helping. This folder has everything the app shows on screen, in ev
 ## How to contribute
 
 - **A few fixes:** open a *Translation suggestion* issue with the key (for example `meter.empty.npcap_missing.title`), the current text and your suggestion.
-- **A whole language or a large review:** open a pull request that changes only `i18n/<language>.json` (for a new language, add the new file). Read [CONTRIBUTING.md](../CONTRIBUTING.md) first. A validator runs on every pull request that changes `i18n/`. You can run it yourself from the root of the repository:
+- **A whole language or a large review:** open a pull request that changes only `i18n/<language>.json` (for a new language, add the new file). Read [CONTRIBUTING.md](../CONTRIBUTING.md) first. A quick automatic check runs on every pull request (a first filter; we run a stricter check ourselves). You can run it yourself from the root of the repository:
 
 ```
 node scripts/validate-i18n.mjs
@@ -36,7 +36,7 @@ A JSON object. The first entry is `@meta`; then every key of `pt-BR.json`, **in 
 }
 ```
 
-- Keep the **same keys in the same order** as `pt-BR.json`. Do not add or remove keys: the validator fails on a missing or extra key, or on an empty value. If you translate only part, leave the other values as they are and say so in the pull request.
+- Keep the **same keys in the same order** as `pt-BR.json`. Do not add or remove keys: the check fails on a missing or extra key, a duplicate key, or an empty value. If you translate only part, leave the other values as they are and say so in the pull request.
 - In `@meta`, `"machine": true` means machine translation. Set `"machine": false` only if a person wrote or reviewed the text, and tell us who in the pull request. In an existing catalog, do not change `reviewed`, `sourceHash` or `complete`: we set them when we import your work.
 - Save as UTF-8, no BOM, LF line endings.
 
@@ -46,7 +46,7 @@ A JSON object. The first entry is `@meta`; then every key of `pt-BR.json`, **in 
 - Plural and `select` messages, for example `{count, plural, one {# item} other {# items}}`. Keep the structure and the argument names; translate only the text inside the branches. Every plural or `select` needs an `other` branch. Exact branches such as `=0 {…}` may stay.
 - Use the [CLDR plural categories](https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html) of your language: Chinese and Japanese only need `other`; Russian uses `one`, `few`, `many` and `other`. You may add or remove categories for your language. The validator checks the syntax, not which categories your language needs.
 - Inside a plural branch, `#` stands for the number. Apostrophes are special next to braces: a literal `{` or `}` is written `'{'` and `'}'`, a literal `#` inside a plural is `'#'`, and a straight apostrophe right before a `{placeholder}` hides it. For elision (French `l’{name}`) use the typographic apostrophe `’`, or write the straight one twice (`''`).
-- `<tags>` such as `<b>…</b>`, links, domains, e-mail addresses, file names, hotkeys (`Ctrl+Alt+B`) and product names (`AionCore`, `AionCore Meter`, `Aion 2`, `NCSOFT`, `Npcap`, `Discord`, `YouTube`, `WebView2`). The validator checks `{placeholders}`, `<tags>` and links; the rest is up to you.
+- `<tags>` such as `<b>…</b>`, links, domains, e-mail addresses, file names, hotkeys (`Ctrl+Alt+B`) and product names (`AionCore`, `AionCore Meter`, `Aion 2`, `NCSOFT`, `Npcap`, `Discord`, `YouTube`, `WebView2`). The check compares `{placeholders}`, `<tags>`, links, domains and e-mail addresses with the Portuguese text; the rest is up to you and to our review.
 - **Game names** (classes, items, places, bosses) must match the official Aion 2 client in your language. See `GLOSSARY.md`. If the game has no name in your language, use the English one. Never guess.
 
 ## What each kind of key wants
@@ -74,7 +74,7 @@ The **start of a key** is the area: `meter.` is the main meter window (very tigh
 
 ## Texts that need extra care
 
-- **Consent, legal and privacy texts**: `consent.*`, `legal.*`, `site.ranking_consent.*`, `site.praise_consent.*`, `site.inspect_consent.*`, `site.build_consent.*`, `site.telemetry.*`, `site.never_sent.*`, `site.field.*`, `firstrun.*`. Translate faithfully, do not adapt or summarize. Until a person reviews them, they stay labeled as machine translation, and a new language is not published with them.
+- **Consent, legal and privacy texts** (`consent.*`, `legal.*`, `site.ranking_consent.*`, `site.praise_consent.*`, `site.inspect_consent.*`, `site.build_consent.*`, `site.telemetry.*`, `site.never_sent.*`, `site.field.*`, `firstrun.*`), **prices** (`support.*`) and the **affiliate notice** (`cfg.about.partner.*`): translate faithfully, do not adapt or summarize. We do not import these keys from a pull request until we have reviewed them ourselves, and a language is not published with them unreviewed. The app keeps its current text meanwhile.
 - **Critical screens**: `app.*`, `language.*`, `site.erro.*`, `site.auth.*`, `hud.update.*`, `hud.updating.*` and `inst.*` (first run, errors, updater, installer). Please say in the pull request whether a native speaker reviewed them.
 - **Prices and currencies** (`support.*`) come from the payment platform: never convert them.
 - **Key names on the keyboard** (`hotkey.key.*`): use what a keyboard in your language prints. The shortcut itself stays `Ctrl+Alt+…`.
@@ -86,3 +86,7 @@ The **start of a key** is the area: `meter.` is the main meter window (very tigh
 3. Open a pull request. A new language enters the app as a draft: it is not in the language picker or the installer until the review is done and the layout for your script is tested (fonts, line breaks, window sizes).
 
 Questions? Open an issue or ask on [Discord](https://aioncore.app/discord).
+
+## License note
+
+The catalogs in this folder are the texts of the AionCore app. They are published here so that people can review and improve them; all rights stay with the maintainer. What you contribute follows the contribution terms in [CONTRIBUTING.md](../CONTRIBUTING.md).
