@@ -234,5 +234,5 @@ No to both. AionCore is an independent project made by a player, not affiliated 
 
 ## Credits
 
-AionCore by **Guilherme Filvoch (Simavi)**.
+AionCore by **Simavi**.
 Independent fan project, not affiliated with NCSOFT. Aion 2 and its icons, names and art belong to NCSOFT and its licensors.
