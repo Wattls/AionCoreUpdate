@@ -245,6 +245,12 @@ No to both. AionCore is an independent project made by a player, not affiliated 
 - **Bugs:** open an [issue](https://github.com/filvoch/AionCoreUpdate/issues) or write to contato@aioncore.app.
 - **In the app:** **Settings › Help and diagnostics**.
 
+## The project in numbers
+
+[![GitHub stars](https://img.shields.io/github/stars/filvoch/AionCoreUpdate?style=flat&color=1a9bbd)](https://github.com/filvoch/AionCoreUpdate/stargazers) [![Installer downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffilvoch%2FAionCoreUpdate%2Fstats%2Finstaller-downloads.json&style=flat)](https://github.com/filvoch/AionCoreUpdate/releases) [![Latest version](https://img.shields.io/github/v/release/filvoch/AionCoreUpdate?label=version&style=flat&color=1a9bbd)](https://github.com/filvoch/AionCoreUpdate/releases/latest)
+
+<sub>Installer downloads counts installs and automatic updates of every release and is refreshed once a day. The numbers come from GitHub's own counters: AionCore does not track the visitors of this page.</sub>
+
 ## Credits
 
 AionCore by **Simavi**.
