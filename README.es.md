@@ -32,17 +32,19 @@
 - **Encuentra el Cubo Oculto.** El radar se abre solo cuando el juego muestra un cubo cerca y te dice adónde ir.
 - **Todo en una barra sobre el juego.** Un botón para cada ventana, un candado que deja pasar el clic y nada delante cuando abres el mapa o el inventario.
 
-## Novedades de la 1.16
+## Novedades de la 1.20
 
-- **AionCore Theme**, el nuevo visual del medidor para quienes apoyan: parte superior en dos líneas, flecha de tendencia en cada jugador, columnas por rol, copiar el DPS del grupo al chat y captura solo del medidor, con un clic.
-- **Para todos:** los nombres de los efectos (aturdimiento, quemadura, frenesí de los jefes y más) aparecen en **Buffs** y en el Historial; si activas una VPN o un reductor de ping después de abrir AionCore, encuentra la conexión por sí solo en 15 segundos como máximo; y el ping ahora tiene color.
-- **Corregido para todos:** la recuperación de MP, DP y AP ya no cuenta como curación de HP, y la curación, los escudos y el daño recibido que llegan después del final del combate ya no suman.
+- **Mapa del juego en la app:** nueva pestaña **Mapa**, gratis, con recolección, monstruos, teletransportes, entradas de mazmorra, cubos y jefes de campo. En vivo, muestra tu posición y puede avisarte cuando reaparece un jefe de campo.
+- **Entra con Discord desde el navegador:** el botón abre el navegador y te devuelve a AionCore ya conectado, sin escribir ningún código.
+- **Radares más grandes y mejores:** el radar de mascotas ahora tiene el mapa arriba y la lista abajo, los dos radares se acercan y cambian de tamaño libremente, el radar de Cubos marca el cubo que está muy por encima o por debajo de ti y el mapa del juego aparece detrás de los puntos.
+- **Escala de la interfaz del 75 % al 200 %** (Ctrl +, Ctrl − y Ctrl 0) y un medidor que puede crecer hacia arriba.
+- **Más números, gratis:** nueva pestaña **APS** (golpes por segundo), curación efectiva y sobrecuración, y descripciones que explican cada métrica. Quienes apoyan también reciben el **Análisis de habilidades** y una pestaña **Apoyo** renovada.
 
 [Todo lo que cambió](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [Las pantallas nuevas en el sitio](https://aioncore.app/es/novo)
 
 ## Medidor de DPS del grupo
 
-- **Todo el grupo de un vistazo:** una fila por jugador con daño, DPS y porcentaje. Pestañas **HPS** y **Recibido** para la curación y el daño recibido. Alcance **Yo**, **Grupo**, **Raid** o **Automático**.
+- **Todo el grupo de un vistazo:** una fila por jugador con daño, DPS y porcentaje. Pestañas **HPS**, **APS** (golpes por segundo) y **Recibido** para la curación, los golpes y el daño recibido. Alcance **Yo**, **Grupo**, **Raid** o **Automático**.
 - **Cada habilidad al detalle:** haz clic en un nombre y mira golpes, críticos, golpes por la espalda, multigolpes, promedio, mínimo y máximo, gráfico y registro.
 - **Tiempos del jefe:** HP del jefe en números, **Derrota en** (estimación según lo rápido que baja el HP) y **Furia en** para jefes con tiempo de furia conocido.
 - **Cada combate guardado en tu PC:** **Historial**, resumen de cada combate, **Comparar combates**, **Runs de jefes**, resumen de tu muerte y exportar a JSON, CSV o PNG.
@@ -58,6 +60,7 @@ Una ventanita que se abre sola cuando el juego muestra un Cubo Oculto cerca de t
 - **Automático:** se abre cuando aparece un cubo aún cerrado y se oculta unos 3 segundos después de que desaparece el último. ¿Prefieres verlo siempre? Activa **Mantener el radar siempre visible**.
 - **Norte fijo**, como el minimapa del juego, o **Gira contigo**.
 - **Varios cubos:** el cubo actual tiene el punto más grande y la línea; el texto muestra «+N más».
+- **Altura, zoom y tamaño:** un cubo a 3 m o más por encima o por debajo de ti recibe una marca ▲ o ▼ y el texto dice cuántos metros. Desbloquea el radar para acercar con la rueda del mouse y arrastrar los bordes.
 - **Avisos que te dicen adónde ir:** a menos de 80, 50, 25 y 10 m, si el cubo está a tu derecha, delante o detrás, y cuando otro jugador ya lo abrió.
 
 El radar muestra solo los cubos que envía el juego. El juego solo informa tu posición cuando usas una habilidad o un dash; sin una posición reciente, el radar muestra «Cubo detectado» y te pide que te muevas. Todo está en **Configuración › Avisos y eventos**.
@@ -70,7 +73,7 @@ El radar muestra solo los cubos que envía el juego. El juego solo informa tu po
 - **Ventana principal:** Inicio con la cuenta regresiva para el reinicio diario y semanal, tus personajes, los próximos eventos y tu último combate; Ctrl+K busca pantallas y comandos. Se abre desde la barra, la bandeja de Windows o con Ctrl+Alt+A.
 - **Sin estorbar:** la barra y los overlays se ocultan cuando otro programa está delante y cuando se abre un menú del juego (Esc, mapa, inventario). Con **Abrir AionCore como administrador** activado, AionCore solo comprueba si las teclas Alt y Esc están pulsadas, solo con el juego en primer plano; ninguna otra tecla, y no se graba ni se envía nada. Sin el modo administrador, se guía por el cursor del juego. Se desactiva en **Configuración › En el juego**.
 - **Atajos Ctrl+Alt** que funcionan sobre el juego (M medidor, G grupo, H contraer la barra, L bloquear, K clic transparente, D ocultar todo). Si otro programa ya usa uno, AionCore te ofrece cambiarlo.
-- Amenaza, Objetivo PvP, Arena y Mapa aparecen atenuados en la barra: **próximamente**.
+- Amenaza, Objetivo PvP y Arena aparecen atenuados en la barra: **próximamente**. El **Mapa** es una pestaña gratis de la ventana principal.
 
 <p align="center"><img alt="Captura de pantalla de la barra de AionCore: el nombre a la izquierda, una fila de botones con iconos, el control de opacidad en 100 %, el candado y los botones de contraer, ajustes y cerrar (app en inglés)" src="media/shot-bar.jpg" width="880"></p>
 
@@ -133,6 +136,9 @@ Lo que tiene hoy quien apoya:
 - **Panel de sala:** quién está en la sala, el GS y el poder de combate de cada uno y quién está listo.
 - **Tarjeta del candidato:** quien pide entrar en tu sala aparece en una ventanita con clase, nivel, GS y los combates que ya jugaron juntos, y puedes consultar el resumen de su perfil público en el sitio.
 - **Temas de color** del medidor.
+- **Análisis de habilidades:** una pestaña en los detalles de cada jugador, en vivo y en el Historial, con usos estimados, daño por uso, DPS activo, picos y línea de tiempo de cada habilidad.
+- **Sello de apoyo:** un sello en tu fila del medidor con gema, estilo y movimiento, y una barra de éter del color de tu barra. Solo tú lo ves en tu medidor.
+- **Informe de Arena:** en el Resumen de un combate de Arena, una tarjeta con resultado, puntuación, duración, bajas y muertes (lo que el juego aún no informó queda en blanco).
 - **Antes que nadie:** avisos de mecánica de jefe (hasta el 10/11/2026) y avisos de la barra de guardia del jefe (hasta el 11/11/2026).
 
 <table>
@@ -225,6 +231,12 @@ Sin una cuenta conectada, ningún combate sale de tu PC. AionCore descarga los i
 
 No y no. AionCore es un proyecto independiente, hecho por un jugador, sin vínculo con NCSOFT. El código fuente no es público: este repositorio guarda solo los instaladores publicados y esta página.
 </details>
+
+## Contribuir
+
+- **Errores e ideas:** abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues/new/choose) y elige una plantilla (informe de error, solicitud de función o sugerencia de traducción). Nunca pegues nombres de personajes, registros ni paquetes sin quitar antes los nombres.
+- **Traducciones:** pronto, mediante pull requests a una carpeta `i18n/` que se abrirá en este repositorio. Todavía sin fecha.
+- **Seguridad:** informa de las vulnerabilidades en privado, escribiendo a contato@aioncore.app, y no en un issue público. Consulta el [SECURITY.md](SECURITY.md).
 
 ## Comunidad y contacto
 

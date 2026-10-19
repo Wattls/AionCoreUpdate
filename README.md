@@ -32,17 +32,19 @@
 - **Find the Hidden Cube.** The radar opens by itself when the game shows a cube nearby and tells you where to go.
 - **Everything in one bar over the game.** One button per window, a lock that lets clicks through, and nothing in the way when you open the map or the inventory.
 
-## What's new in 1.16
+## What's new in 1.20
 
-- **AionCore Theme**, the new meter look for supporters: a two-line header, a trend arrow on every player row, columns per role, copy the Party's DPS to the chat and a screenshot of the meter only, with one click.
-- **For everyone:** effect names (stun, burn, boss frenzy and more) show up in **Buffs** and in History; if you turn on a VPN or a ping reducer after opening AionCore, it finds the connection by itself within 15 seconds; and the ping is now color-coded.
-- **Fixed for everyone:** MP, DP and AP recovery no longer counts as HP healing, and healing, shields and damage taken that arrive after the fight ends no longer count.
+- **Game map in the app:** a new, free **Map** tab with gathering, monsters, teleports, dungeon entrances, cubes and field bosses. Live, it shows your position and can notify you when a field boss respawns.
+- **Connect with Discord from your browser:** the button opens the browser and brings you back to AionCore connected, with no code to type.
+- **Bigger and better radars:** the pet radar now has the map on top and a list below, both radars zoom and resize freely, the Cube radar marks a cube that is well above or below you, and the game map shows behind the dots.
+- **Interface scale from 75% to 200%** (Ctrl +, Ctrl − and Ctrl 0) and a meter that can grow upward.
+- **More numbers, free:** a new **APS** (hits per second) tab, effective healing and overheal, and tooltips that explain every metric. Supporters also get **Skill analysis** and a revamped **Supporter** tab.
 
 [Everything that changed](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [The new screens on the website](https://aioncore.app/en/features)
 
 ## Party DPS meter
 
-- **The whole Party at a glance:** one row per player with damage, DPS and share. **HPS** and **Taken** tabs for healing and damage taken. Scope **Me**, **Party**, **Raid** or **Automatic**.
+- **The whole Party at a glance:** one row per player with damage, DPS and share. **HPS**, **APS** (hits per second) and **Taken** tabs for healing, hits and damage taken. Scope **Me**, **Party**, **Raid** or **Automatic**.
 - **Skill breakdown:** click a name to see hits, crits, back attacks, multi-hits, average, min and max, a chart and the hit log.
 - **Boss timers:** Boss HP in numbers, **Kill in** (estimate from how fast the HP is dropping) and **Enrage in** for bosses with a known enrage timer.
 - **Every fight saved on your PC:** **History**, a summary of each fight, **Compare fights**, **Boss runs**, death recap, and export to JSON, CSV or PNG.
@@ -58,6 +60,7 @@ A small window that opens by itself when the game reports a Hidden Cube near you
 - **Automatic:** it opens when an unopened cube appears and hides about 3 seconds after the last one is gone. Prefer to always see it? Turn on **Keep the radar always visible**.
 - **North up**, like the in-game minimap, or **Turns with you**.
 - **Several cubes:** the cube you are tracking gets the big dot and the line; the text shows "+N more".
+- **Height, zoom and size:** a cube 3 m or more above or below you gets a ▲ or ▼ mark and the text says how many meters. Unlock the radar to zoom with the wheel and drag its edges.
 - **Alerts that tell you where to go:** within 80, 50, 25 and 10 m, whether the cube is to your right, ahead or behind, and when another player has already opened it.
 
 The radar shows only cubes the game sends. The game reports your own position only when you use a skill or dash, so without a recent position the radar shows "Cube detected" and asks you to move. Everything is in **Settings › Alerts and events**.
@@ -70,7 +73,7 @@ The radar shows only cubes the game sends. The game reports your own position on
 - **Main window:** Home with the countdown to the daily and weekly reset, your characters, upcoming events and your last fight; Ctrl+K searches screens and commands. Open it from the bar, the Windows tray or with Ctrl+Alt+A.
 - **Out of the way:** the bar and the overlays hide when another program is in front and when a game menu opens (Esc, map, inventory). With **Open AionCore as administrator** on, AionCore checks only whether the Alt and Esc keys are pressed, only while the game is in front; no other key, and nothing is recorded or sent. Without administrator mode, it goes by the game's cursor. Turn it off in **Settings › In-game**.
 - **Ctrl+Alt shortcuts** that work over the game (M meter, G party, H collapse the bar, L lock, K click-through, D hide everything). If another program already uses one, AionCore offers to change it.
-- Threat, PvP target, Arena and Map appear dimmed on the bar: **coming soon**.
+- Threat, PvP target and Arena appear dimmed on the bar: **coming soon**. The **Map** is a free tab in the main window.
 
 <p align="center"><img alt="Screenshot of the AionCore bar: the name on the left, a row of icon buttons, the opacity control at 100%, the lock and the collapse, settings and close buttons (app in English)" src="media/shot-bar.jpg" width="880"></p>
 
@@ -133,6 +136,9 @@ What supporters get today:
 - **Room panel:** who is in the room, their GS and Combat Power, and who is ready.
 - **Applicant card:** whoever asks to join your room shows up in a small window with class, level, GS and the fights you already had together, and you can look up their public profile summary on the website.
 - **Color themes** for the meter.
+- **Skill analysis:** a tab in each player's details, live and in History, with estimated uses, damage per use, active DPS, peaks and a timeline for every skill.
+- **Supporter badge:** a badge on your own meter row with a gem, a style and a motion, plus an Aether bar in the color of your bar. Only you see it on your meter.
+- **Arena report:** in the Summary of an Arena fight, a card with result, score, duration, kills and deaths (anything the game has not reported yet stays blank).
 - **Before everyone else:** boss mechanic alerts (until November 10, 2026) and boss guard bar notices (until November 11, 2026).
 
 <table>
@@ -225,6 +231,12 @@ Without a connected account, no fight leaves your PC. AionCore downloads skill i
 
 No to both. AionCore is an independent project made by a player, not affiliated with NCSOFT. The source code is not public: this repository holds only the published installers and this page.
 </details>
+
+## Contribute
+
+- **Bugs and ideas:** open an [issue](https://github.com/filvoch/AionCoreUpdate/issues/new/choose) and pick a template (bug report, feature request or translation suggestion). Never paste character names, logs or packets without removing the names first.
+- **Translations:** soon, as pull requests to an `i18n/` folder that will be opened in this repository. No date yet.
+- **Security:** report vulnerabilities in private by writing to contato@aioncore.app, not in a public issue. See [SECURITY.md](SECURITY.md).
 
 ## Community and contact
 
