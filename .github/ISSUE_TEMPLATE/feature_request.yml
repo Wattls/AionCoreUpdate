@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest an idea or an improvement for AionCore.
+title: "[Idea] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. Asking for something does not promise it will be built or give it a date.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Tell us what you are trying to do and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of AionCore?
+      options:
+        - Meter
+        - Radar (Hidden Cubes, pets)
+        - Top bar or main window
+        - Installer
+        - Updater
+        - Alerts
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: AionCore version (optional)
+      placeholder: "1.20.1"
+    validations:
+      required: false

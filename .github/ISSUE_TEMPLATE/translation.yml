@@ -1,0 +1,61 @@
+name: Translation suggestion
+description: A text is wrong, unclear or missing in your language.
+title: "[Translation] "
+labels: ["translation", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping AionCore speak your language. Do not paste character names or other personal data.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - English (en)
+        - Portuguese, Brazil (pt-BR)
+        - Spanish (es)
+        - German (de)
+        - French (fr)
+        - Russian (ru)
+        - Chinese, Simplified (zh-CN)
+        - Other (write it below)
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Key or screen
+      description: The translation key if you know it, or the screen and button where you see the text.
+      placeholder: "Settings > Account and upload, button 'Connect with Discord'"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your suggestion
+      description: Keep placeholders such as {name} and tags such as <b> exactly as they are.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it better?
+      description: For example wrong meaning, unnatural wording, game term used differently in your language.
+    validations:
+      required: true
+  - type: dropdown
+    id: native
+    attributes:
+      label: Are you a native speaker of this language?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true

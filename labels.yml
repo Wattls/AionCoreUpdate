@@ -1,0 +1,106 @@
+# Label scheme for this repository.
+# Documentation only: the owner applies it later (for example with a label-sync tool or `gh label create`).
+# Colors are 6-digit hex without '#'. Descriptions are under 100 characters.
+
+# Type
+- name: bug
+  color: d73a4a
+  description: Something does not work as expected
+- name: enhancement
+  color: a2eeef
+  description: New feature or improvement
+- name: translation
+  color: 0e8a16
+  description: Wrong, unclear or missing text in a language
+- name: documentation
+  color: 0075ca
+  description: README, guides or other documentation
+- name: question
+  color: d876e3
+  description: A question about using AionCore
+- name: accessibility
+  color: 5319e7
+  description: Readability, contrast, keyboard or screen reader use
+
+# State
+- name: needs-triage
+  color: fbca04
+  description: New issue, not reviewed yet
+- name: needs-info
+  color: fef2c0
+  description: Waiting for more details from the reporter
+- name: confirmed
+  color: e99695
+  description: Reproduced or accepted
+- name: in-progress
+  color: f9d0c4
+  description: Someone is working on it
+- name: fixed-in-next-release
+  color: c2e0c6
+  description: Fixed and shipping in the next version
+- name: wontfix
+  color: ffffff
+  description: Will not be worked on
+- name: duplicate
+  color: cfd3d7
+  description: Already reported in another issue
+- name: invalid
+  color: e4e669
+  description: Not a valid report
+
+# Area
+- name: area:meter
+  color: 1a9bbd
+  description: DPS meter and fight details
+- name: area:radar
+  color: 1a9bbd
+  description: Hidden Cube and pet radars
+- name: area:bar
+  color: 1a9bbd
+  description: Top bar and main window
+- name: area:installer
+  color: 1a9bbd
+  description: The installer
+- name: area:updater
+  color: 1a9bbd
+  description: Automatic updates
+- name: area:i18n
+  color: 1a9bbd
+  description: Languages and translation files
+- name: area:alerts
+  color: 1a9bbd
+  description: Mechanic alerts and out-of-game alerts
+- name: area:site
+  color: 1a9bbd
+  description: The website at aioncore.app
+
+# Language
+- name: lang:zh-CN
+  color: 006b75
+  description: Chinese (Simplified)
+- name: lang:en
+  color: 006b75
+  description: English
+- name: lang:es
+  color: 006b75
+  description: Spanish
+- name: lang:de
+  color: 006b75
+  description: German
+- name: lang:fr
+  color: 006b75
+  description: French
+- name: lang:ru
+  color: 006b75
+  description: Russian
+- name: lang:pt-BR
+  color: 006b75
+  description: Portuguese (Brazil)
+
+# Community
+- name: good first issue
+  color: 7057ff
+  description: Good for newcomers
+- name: help wanted
+  color: 008672
+  description: Extra attention or help is welcome

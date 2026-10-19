@@ -1,0 +1,90 @@
+name: Bug report
+description: Something in AionCore does not work as expected.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please fill in as much as you can.
+
+        **Privacy first:** never paste character names, account names, logs or packet captures without removing every name first. If you are not sure, leave it out. For anything sensitive, write to contato@aioncore.app instead of opening a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: AionCore version
+      description: Shown in Settings > About, for example 1.20.1.
+      placeholder: "1.20.1"
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Aion 2 region and server
+      description: For example Global (South America), Taiwan, Korea. Do not write your character name.
+    validations:
+      required: true
+  - type: dropdown
+    id: window_mode
+    attributes:
+      label: Game window mode
+      options:
+        - Borderless window
+        - Windowed
+        - Full screen (exclusive)
+        - I do not know
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of AionCore?
+      options:
+        - Meter
+        - Radar (Hidden Cubes, pets)
+        - Top bar or main window
+        - Installer
+        - Updater
+        - Alerts
+        - Translation or text
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. Screenshots are welcome, with names hidden.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: false
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostic package (optional)
+      description: |
+        In AionCore, open Settings > Help and diagnostics and create the diagnostic package. Describe what it says here, or attach it only after checking that it contains no character names. Do not attach anything you are not comfortable making public.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed character names, account names and any other personal data from everything I posted here.
+          required: true

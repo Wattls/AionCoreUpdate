@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask the community on Discord
+    url: https://aioncore.app/discord
+    about: Questions, help and chat with other players and the author.
+  - name: Privacy policy
+    url: https://aioncore.app/en/privacy
+    about: What stays on your PC and what is sent when you connect an account.
+  - name: Report a security problem (private)
+    url: https://github.com/filvoch/AionCoreUpdate/security/policy
+    about: Do not open a public issue for vulnerabilities. Write to contato@aioncore.app, as explained in SECURITY.md.
