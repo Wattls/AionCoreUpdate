@@ -1,0 +1,24 @@
+name: Validate translations
+
+# Runs on pull requests only (never pull_request_target) and only when translation files change.
+# It reads the pull request code with a read-only token and has no access to secrets.
+on:
+  pull_request:
+    paths:
+      - "i18n/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/validate-i18n.mjs

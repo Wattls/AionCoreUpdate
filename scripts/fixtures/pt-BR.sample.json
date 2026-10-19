@@ -1,0 +1,27 @@
+{
+  "@meta": {
+    "lang": "pt-BR",
+    "note": "Test sample: real keys with plural, select, # and tags."
+  },
+  "app.export.anonymized": "Exportado com nomes trocados por códigos ({replaced, plural, =0 {{replacedShown} trocas} one {{replacedShown} troca} other {{replacedShown} trocas}}, {kept, plural, =0 {{keptShown} quadros} one {{keptShown} quadro} other {{keptShown} quadros}}).",
+  "meter.target.grind.name_kills": "Grind · {targets, plural, =0 {# monstros} one {# monstro} other {# monstros}} · {kills, plural, one {# derrotado} other {# derrotados}}",
+  "cfg.diag.banner": "Parte do tráfego não chegou ({gaps, plural, =0 {# buracos} one {# buraco} other {# buracos}}, {lost} perdidos, {drops, plural, =0 {# pacotes descartados} one {# pacote descartado} other {# pacotes descartados}}): golpes desse trecho podem faltar.",
+  "cfg.diag.grouplist.head": "{frames, plural, =0 {# quadros} one {# quadro} other {# quadros}}, {rejected, plural, =0 {# falhas} one {# falha} other {# falhas}}",
+  "alert.coach.ref.source": "referência da comunidade, {patch}, {users} personagens{low, select, yes {, poucos dados} other {}}",
+  "alert.invite.anonymous": "{kind, select, request {{form, select, class_level {Um {cls} nv. {level} quer entrar} class {Um {cls} quer entrar} level {Alguém nv. {level} quer entrar} other {Alguém quer entrar}}} call {{form, select, class_level {Um {cls} nv. {level} chamou você} class {Um {cls} chamou você} level {Alguém nv. {level} chamou você} other {Alguém chamou você}}} other {{form, select, class_level {Um {cls} nv. {level} convidou você} class {Um {cls} convidou você} level {Alguém nv. {level} convidou você} other {Alguém convidou você}}}}",
+  "alert.invite.class_level": "{form, select, class_level {{cls} nv. {level}} class {{cls}} level {nv. {level}} other {{cls}}}",
+  "calibration.result": "Medidor {meter} · jogo {game} · diferença {diff} ({pct}%){verdict, select, equal { · igual} close { · dentro de 0,5%} other {}}",
+  "alert.coach.idle.text": "Você ficou parado {idle} s entre os seus golpes ({pauses, plural, =0 {# pausas} one {# pausa} other {# pausas}} de mais de 2 s). Cada pausa é dano que não saiu (o limite de {limit}% é estimativa).",
+  "meter.format.spoken_seconds": "{count, plural, =0 {# segundos} one {# segundo} other {# segundos}}",
+  "meter.header.aps.total": "{hits, plural, =0 {{shown} golpes} one {{shown} golpe} other {{shown} golpes}}",
+  "alert.coach.deaths.evidence": "{count, plural, one {# morte} other {# mortes}}",
+  "alert.coach.deaths.text": "{count, plural, one {Você morreu # vez nesta luta. Veja o recap da morte para saber o que a causou.} other {Você morreu # vezes nesta luta. Veja o recap das mortes para saber o que as causou.}}",
+  "alert.event.spawns_in": "Nasce em {minutes, plural, one {# minuto} other {# minutos}}",
+  "alert.event.starts_in": "Começa em {minutes, plural, one {# minuto} other {# minutos}}",
+  "app.export.readme.head": "Coleta do AionCore Meter\nGerada em {date}. {recordings, plural, one {# gravação} other {# gravações}}.",
+  "meter.format.absorbed": "{count, plural, one {# absorvido} other {{shown} absorvidos}}",
+  "feedback.error.contact_too_long": "{count, plural, one {O contato passa de {shown} caractere.} other {O contato passa de {shown} caracteres.}}",
+  "feedback.error.message_too_long": "{count, plural, one {A mensagem passa de {shown} caractere.} other {A mensagem passa de {shown} caracteres.}}",
+  "guide.opts.hint": "Atalhos: <b>/</b> ou <b>Ctrl+K</b> busca · <b>V</b> vídeo · <b>M</b> mini-player · <b>Esc</b> fecha",
+  "app.error.capture_failed": "Não foi possível iniciar a captura de pacotes.\n\nVerifique se o Npcap está instalado (https://npcap.com, modo compatível com WinPcap). Os detalhes estão no log em {logs}.\n\nO medidor vai fechar agora."
+}
