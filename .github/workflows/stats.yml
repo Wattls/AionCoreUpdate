@@ -1,0 +1,51 @@
+name: Update stats
+
+# Once a day (and on demand) counts the installer downloads and publishes the number for the README badge on the
+# separate `stats` branch, so the main branch history stays clean. Reads GitHub's own counters only: nothing about
+# visitors. Runs only on a schedule or by hand (never for pull requests), with code from main.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    if: github.repository == 'filvoch/AionCoreUpdate'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Tests
+        run: node --test scripts/update-stats.test.mjs
+
+      - name: Count the installer downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/update-stats.mjs "$RUNNER_TEMP/installer-downloads.json"
+
+      - name: Publish to the stats branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin stats > /dev/null; then
+            git fetch --no-tags origin stats
+            git checkout -B stats origin/stats
+          else
+            git checkout --orphan stats
+            git rm -rf . > /dev/null
+          fi
+          cp "$RUNNER_TEMP/installer-downloads.json" installer-downloads.json
+          git add installer-downloads.json
+          if git diff --cached --quiet; then echo "Number unchanged."; exit 0; fi
+          git commit -m "stats: installer downloads"
+          git push origin stats
