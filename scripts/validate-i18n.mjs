@@ -7,7 +7,9 @@
 //
 // The source catalog is pt-BR. For every translated catalog it checks: valid JSON, @meta present,
 // same keys in the same order, same {arguments}, same <tags>, same links and domains, no empty
-// value, no new invisible or bidi characters, and no dangerous HTML. Exit code 1 on any error.
+// value, no new invisible or bidi characters, no dangerous HTML, and `.short` texts within their
+// length limit. i18n/exceptions.json ({ "<lang>": ["key", ...] }) lists keys whose arguments may differ.
+// Exit code 1 on any error.
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
@@ -141,8 +143,10 @@ const DANGEROUS = [
 // ---------- validation ----------
 
 /** Compares one catalog (object) against the source. Returns a list of error strings. */
-export function validateCatalog(source, target) {
+/** `opts.argExceptions`: keys whose {argument} set may differ (documented in i18n/exceptions.json). */
+export function validateCatalog(source, target, opts = {}) {
   const errors = [];
+  const argOk = opts.argExceptions ?? new Set();
   const isObj = (o) => o && typeof o === 'object' && !Array.isArray(o);
   if (!isObj(target)) return ['catalog is not a JSON object'];
   if (!isObj(target['@meta'])) errors.push('@meta is missing or not an object');
@@ -173,7 +177,7 @@ export function validateCatalog(source, target) {
     try { sa = argumentNames(src); } catch { /* source problem: skip the argument check for this key */ }
     try {
       const ta = argumentNames(val);
-      if (sa) {
+      if (sa && !argOk.has(k)) {
         const lost = [...sa].filter((n) => !ta.has(n));
         const added = [...ta].filter((n) => !sa.has(n));
         if (lost.length) errors.push(`${k}: argument(s) missing: ${lost.map((n) => '{' + n + '}').join(' ')}`);
@@ -181,6 +185,13 @@ export function validateCatalog(source, target) {
       }
     } catch (e) {
       errors.push(`${k}: malformed message: ${e.message}`);
+    }
+
+    // .short = short version for tight spaces: at most max(ceil(1.4 x source), source + 4) characters
+    if (k.endsWith('.short')) {
+      const sl = [...src].length;
+      const limit = Math.max(Math.ceil(1.4 * sl), sl + 4);
+      if ([...val].length > limit) errors.push(`${k}: too long for a .short text (${[...val].length} characters, limit ${limit})`);
     }
 
     // <tags>
@@ -233,7 +244,7 @@ export function main(argv) {
   if (!files.length) {
     if (!existsSync('i18n')) { console.log('No i18n/ folder yet, nothing to validate.'); return 0; }
     for (const f of readdirSync('i18n').sort()) {
-      if (f.endsWith('.json') && !f.startsWith('_') && resolve('i18n', f) !== resolve(sourcePath)) files.push('i18n/' + f);
+      if (f.endsWith('.json') && f !== 'exceptions.json' && !f.startsWith('_') && resolve('i18n', f) !== resolve(sourcePath)) files.push('i18n/' + f);
     }
     if (!files.length) { console.log('No translated catalogs in i18n/, nothing to validate.'); return 0; }
   }
@@ -241,10 +252,19 @@ export function main(argv) {
   const src = readJson(sourcePath);
   if (src.error) { console.error(`FAIL ${sourcePath}: ${src.error}`); return 1; }
 
+  // Keys whose {argument} set is allowed to differ, per language (reviewed by the maintainer).
+  let exceptions = {};
+  if (existsSync('i18n/exceptions.json')) {
+    const ex = readJson('i18n/exceptions.json');
+    if (ex.error) { console.error(`FAIL i18n/exceptions.json: ${ex.error}`); return 1; }
+    exceptions = ex.json;
+  }
+
   let failed = 0;
   for (const f of files) {
     const t = readJson(f);
-    const errors = t.error ? [t.error] : validateCatalog(src.json, t.json);
+    const lang = basename(f, '.json');
+    const errors = t.error ? [t.error] : validateCatalog(src.json, t.json, { argExceptions: new Set(exceptions[lang] ?? []) });
     if (!errors.length) { console.log(`ok   ${basename(f)}`); continue; }
     failed++;
     console.error(`FAIL ${f}: ${errors.length} problem(s)`);

@@ -72,3 +72,17 @@ test('missing key, extra key and different order are reported', () => {
   const reordered = { '@meta': ok['@meta'], 'a.plain': ok['a.plain'], 'a.hello': ok['a.hello'], 'a.link': ok['a.link'] };
   assert.match(validateCatalog(src, reordered).join('\n'), /key order differs/);
 });
+
+test('.short texts: over the limit fails, within the limit passes', () => {
+  const s = { '@meta': {}, 'x.label.short': 'Group' }; // limit = max(ceil(1.4 * 5), 5 + 4) = 9
+  assert.deepEqual(validateCatalog(s, { '@meta': {}, 'x.label.short': 'Gruppe123' }), []);
+  const errs = validateCatalog(s, { '@meta': {}, 'x.label.short': 'Gruppe1234' });
+  assert.ok(errs.some((e) => e.includes('too long for a .short text')));
+});
+
+test('argument exceptions: a listed key may use other arguments, others may not', () => {
+  const s = { '@meta': {}, 'a.t': '{n, plural, one {# hit} other {# hits}}' };
+  const t = { '@meta': {}, 'a.t': 'hits: {nText}' };
+  assert.ok(validateCatalog(s, t).some((e) => e.includes('argument')));
+  assert.deepEqual(validateCatalog(s, t, { argExceptions: new Set(['a.t']) }), []);
+});

@@ -29,12 +29,12 @@ AionCore ships in English, Portuguese (Brazil), Spanish, German, French and Russ
 
 **Small fixes** (a wrong word, a typo, a missing accent): open **New issue → Translation suggestion** with the screen or key, the current text and your suggestion.
 
-**A whole language or a large review:** open a pull request that touches only `i18n/<language>.json`. The `i18n/` folder with the source catalog (`pt-BR.json`), the glossary and a translator's guide will be published in this repository soon. Pull requests will be accepted from then on.
+**A whole language or a large review:** open a pull request that touches only `i18n/<language>.json`. The [`i18n/`](i18n/README.md) folder has the source catalog (`pt-BR.json`), the published translations, the glossary and a translator's guide.
 
 Rules for translations:
 
 - The source of truth is `pt-BR.json`. Keep **the same keys in the same order**.
-- Do not change `{placeholders}`, `<tags>`, `#` inside plural branches, hotkeys, URLs, file names or product names (`AionCore`, `Npcap`, `Discord`, …). Plural and `select` structure must stay intact. A validator runs on every pull request and rejects what breaks this.
+- Do not change `{placeholders}`, `<tags>`, `#` inside plural branches, hotkeys, URLs, file names or product names (`AionCore`, `Npcap`, `Discord`, …). Plural and `select` structure must stay intact. A validator runs on every pull request that changes `i18n/` and rejects broken placeholders, tags, plural and `select` syntax, and links.
 - Follow the glossary: game terms should match the official Aion 2 client in your language.
 - **Machine translation is accepted if you say so** in the pull request. A review by a native speaker is worth much more, so tell us if you are one.
 - The **consent, legal and privacy texts** (`consent.*`, `legal.*`, `site.*_consent.*`, `site.telemetry.*`, `site.never_sent.*`, `site.field.*`, `firstrun.*`) can be proposed, but they stay labeled as machine translation and out of a published language until we have them reviewed.

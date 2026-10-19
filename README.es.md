@@ -235,7 +235,7 @@ No y no. AionCore es un proyecto independiente, hecho por un jugador, sin víncu
 ## Contribuir
 
 - **Errores e ideas:** abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues/new/choose) y elige una plantilla (informe de error, solicitud de función o sugerencia de traducción). Nunca pegues nombres de personajes, registros ni paquetes sin quitar antes los nombres.
-- **Traducciones:** pronto, mediante pull requests a una carpeta `i18n/` que se publicará en este repositorio. Todavía sin fecha.
+- **Traducciones:** los textos de la app están en la carpeta [`i18n/`](i18n/README.md). Para corregir una palabra, abre un issue con la plantilla *Translation suggestion*; para un idioma completo, envía un pull request.
 - **Seguridad:** comunica las vulnerabilidades en privado, escribiendo a contato@aioncore.app, y no en un issue público. Consulta el [SECURITY.md](SECURITY.md).
 
 ## Comunidad y contacto
