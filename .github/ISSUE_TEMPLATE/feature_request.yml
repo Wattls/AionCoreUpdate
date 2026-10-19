@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ideas are welcome. Asking for something does not promise it will be built or give it a date.
+        Ideas are welcome. We cannot promise that a request will be built, or when.
   - type: textarea
     id: problem
     attributes:

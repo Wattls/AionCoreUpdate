@@ -47,7 +47,7 @@ body:
     id: why
     attributes:
       label: Why is it better?
-      description: For example wrong meaning, unnatural wording, game term used differently in your language.
+      description: For example, the meaning is wrong, the wording is unnatural, or the game uses a different term in your language.
     validations:
       required: true
   - type: dropdown

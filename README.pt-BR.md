@@ -36,11 +36,11 @@
 
 - **Mapa do jogo no app:** nova aba **Mapa**, grátis, com coleta, monstros, teleportes, entradas de masmorra, cubos e chefes de campo. Ao vivo, mostra a sua posição e pode avisar quando um chefe de campo renasce.
 - **Entrar com o Discord pelo navegador:** o botão abre o navegador e devolve você ao AionCore já conectado, sem digitar código.
-- **Radares maiores e melhores:** o radar de pets agora tem o mapa em cima e a lista embaixo, os dois radares aproximam e redimensionam livremente, o radar de Cubos marca o cubo que está bem acima ou abaixo de você e o mapa do jogo aparece atrás dos pontos.
-- **Escala da interface de 75% a 200%** (Ctrl +, Ctrl − e Ctrl 0) e medidor que pode crescer para cima.
+- **Radares maiores e melhores:** o radar de pets agora tem o mapa em cima e a lista embaixo, os dois radares têm zoom e mudam de tamanho livremente, o radar de Cubos marca o cubo que está bem acima ou abaixo de você e o mapa do jogo aparece atrás dos pontos.
+- **Escala da interface de 75% a 200%** (Ctrl +, Ctrl − e Ctrl 0) e um medidor que pode crescer para cima.
 - **Mais números, grátis:** nova aba **APS** (golpes por segundo), cura efetiva e overheal, e dicas que explicam cada métrica. Quem apoia também ganha a **Análise de habilidades** e uma aba **Apoiador** renovada.
 
-[Tudo o que mudou](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [As telas novas no site](https://aioncore.app/novo)
+[Tudo o que mudou](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [As telas novas no site](https://aioncore.app/features)
 
 ## Medidor de DPS do grupo
 
@@ -235,7 +235,7 @@ Não e não. O AionCore é um projeto independente, feito por um jogador, sem v�
 ## Contribuir
 
 - **Bugs e ideias:** abra uma [issue](https://github.com/filvoch/AionCoreUpdate/issues/new/choose) e escolha um modelo (relato de bug, pedido de recurso ou sugestão de tradução). Nunca cole nomes de personagem, logs ou pacotes sem tirar os nomes antes.
-- **Traduções:** em breve, por pull request numa pasta `i18n/` que será aberta neste repositório. Ainda sem data.
+- **Traduções:** em breve, por pull request numa pasta `i18n/` que será publicada neste repositório. Ainda sem data.
 - **Segurança:** relate vulnerabilidades em privado, escrevendo para contato@aioncore.app, e não numa issue pública. Veja o [SECURITY.md](SECURITY.md).
 
 ## Comunidade e contato

@@ -22,4 +22,4 @@ This repository accepts pull requests for translations only (files in `i18n/`). 
 
 ### Contribution terms
 
-- [ ] I agree to the contribution terms in CONTRIBUTING.md. <!-- termos pendentes -->
+- [ ] I agree to the contribution terms in CONTRIBUTING.md.

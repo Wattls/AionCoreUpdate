@@ -36,11 +36,11 @@
 
 - **Mapa del juego en la app:** nueva pestaña **Mapa**, gratis, con recolección, monstruos, teletransportes, entradas de mazmorra, cubos y jefes de campo. En vivo, muestra tu posición y puede avisarte cuando reaparece un jefe de campo.
 - **Entra con Discord desde el navegador:** el botón abre el navegador y te devuelve a AionCore ya conectado, sin escribir ningún código.
-- **Radares más grandes y mejores:** el radar de mascotas ahora tiene el mapa arriba y la lista abajo, los dos radares se acercan y cambian de tamaño libremente, el radar de Cubos marca el cubo que está muy por encima o por debajo de ti y el mapa del juego aparece detrás de los puntos.
+- **Radares más grandes y mejores:** el radar de mascotas ahora tiene el mapa arriba y la lista abajo, los dos radares tienen zoom y cambian de tamaño libremente, el radar de Cubos marca el cubo que está muy por encima o por debajo de ti y el mapa del juego aparece detrás de los puntos.
 - **Escala de la interfaz del 75 % al 200 %** (Ctrl +, Ctrl − y Ctrl 0) y un medidor que puede crecer hacia arriba.
 - **Más números, gratis:** nueva pestaña **APS** (golpes por segundo), curación efectiva y sobrecuración, y descripciones que explican cada métrica. Quienes apoyan también reciben el **Análisis de habilidades** y una pestaña **Apoyo** renovada.
 
-[Todo lo que cambió](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [Las pantallas nuevas en el sitio](https://aioncore.app/es/novo)
+[Todo lo que cambió](https://github.com/filvoch/AionCoreUpdate/releases/latest) · [Las pantallas nuevas en el sitio](https://aioncore.app/es/features)
 
 ## Medidor de DPS del grupo
 
@@ -138,7 +138,7 @@ Lo que tiene hoy quien apoya:
 - **Temas de color** del medidor.
 - **Análisis de habilidades:** una pestaña en los detalles de cada jugador, en vivo y en el Historial, con usos estimados, daño por uso, DPS activo, picos y línea de tiempo de cada habilidad.
 - **Sello de apoyo:** un sello en tu fila del medidor con gema, estilo y movimiento, y una barra de éter del color de tu barra. Solo tú lo ves en tu medidor.
-- **Informe de Arena:** en el Resumen de un combate de Arena, una tarjeta con resultado, puntuación, duración, bajas y muertes (lo que el juego aún no informó queda en blanco).
+- **Informe de la Arena:** en el Resumen de un combate de Arena, una tarjeta con resultado, puntuación, duración, bajas y muertes (lo que el juego aún no informó queda en blanco).
 - **Antes que nadie:** avisos de mecánica de jefe (hasta el 10/11/2026) y avisos de la barra de guardia del jefe (hasta el 11/11/2026).
 
 <table>
@@ -235,8 +235,8 @@ No y no. AionCore es un proyecto independiente, hecho por un jugador, sin víncu
 ## Contribuir
 
 - **Errores e ideas:** abre un [issue](https://github.com/filvoch/AionCoreUpdate/issues/new/choose) y elige una plantilla (informe de error, solicitud de función o sugerencia de traducción). Nunca pegues nombres de personajes, registros ni paquetes sin quitar antes los nombres.
-- **Traducciones:** pronto, mediante pull requests a una carpeta `i18n/` que se abrirá en este repositorio. Todavía sin fecha.
-- **Seguridad:** informa de las vulnerabilidades en privado, escribiendo a contato@aioncore.app, y no en un issue público. Consulta el [SECURITY.md](SECURITY.md).
+- **Traducciones:** pronto, mediante pull requests a una carpeta `i18n/` que se publicará en este repositorio. Todavía sin fecha.
+- **Seguridad:** comunica las vulnerabilidades en privado, escribiendo a contato@aioncore.app, y no en un issue público. Consulta el [SECURITY.md](SECURITY.md).
 
 ## Comunidad y contacto
 

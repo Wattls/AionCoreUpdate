@@ -78,7 +78,7 @@ body:
     attributes:
       label: Diagnostic package (optional)
       description: |
-        In AionCore, open Settings > Help and diagnostics and create the diagnostic package. Describe what it says here, or attach it only after checking that it contains no character names. Do not attach anything you are not comfortable making public.
+        In AionCore, open Settings > Help and diagnostics and create the diagnostic package. You can describe its contents here, or attach it only after checking that it contains no character names. Do not attach anything you are not comfortable making public.
     validations:
       required: false
   - type: checkboxes
