@@ -58,7 +58,7 @@ test('empty value is reported', () => {
 });
 
 test('new invisible/bidi character and dangerous HTML are reported', () => {
-  const bidi = validateCatalog(src, withKey('a.plain', 'Прос‮той текст'));
+  const bidi = validateCatalog(src, withKey('a.plain', 'Прос\u{202E}той текст'));
   assert.match(bidi.join('\n'), /a\.plain: invisible or bidi character U\+202E/);
   const bad = validateCatalog(src, withKey('a.plain', 'Текст <img src=x onerror=alert(1)> <script>x</script>'));
   assert.match(bad.join('\n'), /dangerous content/);
