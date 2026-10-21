@@ -1,5 +1,5 @@
 {
-  "@meta": { "lang": "pt-BR", "machine": false, "reviewed": true, "sourceHash": "fec002c258562988b196bc86d7c55253062fe9d646e98a7056b81d82fac935fa", "complete": 1 },
+  "@meta": { "lang": "pt-BR", "machine": false, "reviewed": true, "sourceHash": "1e81ce42df760d1ca1a41fbf195e6c1681b2199bde1b8345703f43eb6511a2b7", "complete": 1 },
   "alert.capture.restored.text": "O medidor voltou a medir as lutas.",
   "alert.capture.restored.title": "Captura restaurada",
   "alert.capture.stopped.blind": "O jogo está aberto, mas o medidor não consegue ler a luta. Se o jogo acabou de atualizar, o medidor precisa de uma versão nova.",
